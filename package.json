@@ -1,0 +1,15 @@
+{
+  "name": "beginnersbase11ty",
+  "version": "0.0.1",
+  "description": "A spring board for the next project that aims to be good for a beginner who enjoys enough simplicty to understand how the parts all fit together and build on solid understanding (hopefully!)",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "author": "Ewan-D",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.1.6"
+  }
+}
