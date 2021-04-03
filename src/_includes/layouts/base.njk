@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+	<title>{{ title }}</title>
+  </head>
+<body>
+	
+
+	{% include "header.njk" %}
+
+	<h1>{{ title }}</h1>
+  	{{ content | safe }}
+
+
+	{% include "footer.njk" %}
+
+</body>
+</html>
