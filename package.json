@@ -4,12 +4,16 @@
   "description": "A spring board for the next project that aims to be good for a beginner who enjoys enough simplicty to understand how the parts all fit together and build on solid understanding (hopefully!)",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve"
+    "dev": "eleventy --serve & postcss src/css/tailwind.css -o src/css/style.css -w",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss src/css/tailwind.css -o src/css/style.css"
   },
   "author": "Ewan-D",
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-navigation": "^0.1.6"
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "autoprefixer": "^10.2.5",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.4"
   }
 }
