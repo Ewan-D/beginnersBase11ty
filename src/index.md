@@ -5,11 +5,11 @@ eleventyNavigation:
   key: Home
   order: 1
 ---
-## it includes the following
+## it includes the following:
 
 <ul>
 {%- for post in collections.posts %}
-	<li><a href="{{post.url}}">{{ post.data.title }}</a></li>
+	<li><a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a></li>
 {%- endfor %}
 </ul>
 
