@@ -2,17 +2,14 @@
 <html lang="en">
   <head>
         <meta charset="UTF-8">
+	<link rel="stylesheet" href="/css/style.css">
 	<title>{{ title }}</title>
   </head>
 <body>
-	
 
 	{% include "header.njk" %}
-
-	<h1>{{ title }}</h1>
+	  <h1>{{ title }}</h1>
   	{{ content | safe }}
-
-
 	{% include "footer.njk" %}
 
 </body>
