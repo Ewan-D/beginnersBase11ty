@@ -2,16 +2,16 @@
 layout: layouts/base
 title: startHere
 eleventyNavigation:
-  key: Home
+  key: home
   order: 1
 ---
-## it includes the following:
+<h2>it includes the following:</h2>
 
 <ul>
 {%- for post in collections.posts %}
 	<li>
-  <a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a><time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time></li>
+  <a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a><time class="pl-4" datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time></li>
 {%- endfor %}
 </ul>
 
-and this is a little info to tell you all about it! Count to three yip ee dee
+<p>and this is a little info to tell you all about it! Count to three yip ee dee</p>
