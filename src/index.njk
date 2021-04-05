@@ -9,7 +9,8 @@ eleventyNavigation:
 
 <ul>
 {%- for post in collections.posts %}
-	<li><a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a></li>
+	<li>
+  <a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a><time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time></li>
 {%- endfor %}
 </ul>
 

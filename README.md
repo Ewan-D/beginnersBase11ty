@@ -52,22 +52,23 @@ all inevitably changes.
 
 ### files and folders:
 
-* package.json
+#### package.json
   - script "npm run build" to get started. if you are wondering the -o is output
     and -w is watch.
   - script "npm run dev " to start the local dev environment.
 
-* .eleventy.js
+#### .eleventy.js
   - this is currently directing the flow on build from src folder to the dist folder.
 
-* postcss.config.js using an array to pass in tailwind and autoprefixer. As I
-  understand it currently postcss can been seen as the manager while tailwind &
-  autoprefixer do the grunt work.(check this)
+#### postcss.config.js 
+  - using an array to pass in tailwind and autoprefixer. As I understand it
+  currently postcss can been seen as the manager while tailwind & autoprefixer
+  do the grunt work.(check this)
 
-* _includes
+#### _includes
   - This folder has base.njk. Link to it through include/base in front matter.
   
-* posts 
+#### posts 
   - This folder includes posts.json. 11ty uses this in the data cascade (I
   think) anything that is going to apply to files within posts. Might be a good
   shout to add it here!
@@ -76,6 +77,16 @@ all inevitably changes.
 ### Plugins
 
 * eleventyNavigation 
+* luxon (format dates etc) I havent included this with the dependency's as it
+  comes with 11ty. No matter! I would have struggled a whole bunch more to
+  figure this out if it wasn't for spotting it in the 11ty base blog
+  devDependancys (which might explain why it is there).
+* Luxon is in the .eleventy.config.js file and uses 11ty's .addFilter to make
+  the readableDate filter which can be added in templates like this {{ post.date
+  | readableDate }}.
+* more on luxon... I also spotted use of the <time> tag. Makes good sense to me!
+  11ty's base config also points you in the direction of html standards for
+  formatting dates. such as dd-LL-yyyy note hyphon
  
   
 ### stumblings
@@ -92,7 +103,7 @@ the following things caught me out ...
   (this seems to be correct so I got rid of postcss leaving just poastcss-cli in
   the dev dependency's also the flags work with just one -)
 
-### & things I don't understand yet aka questions
+### & things I don't understand yet aka off beat questions
 
 - What is purge doing and how does it work in the tailwind.config.js file?
 
