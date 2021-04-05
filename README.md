@@ -52,6 +52,12 @@ all inevitably changes.
 
 ### files and folders:
 
+#### _data
+  - this folder includes a file named 'data.json' for the sites metadata to use
+    in the head for example: <meta name="author" content="{{ meta.author.name
+    }}. I am guessing this helps with seo etc? very nice how 11ty's data cascade
+    just sorts this all out!
+
 #### package.json
   - script "npm run build" to get started. if you are wondering the -o is output
     and -w is watch.
@@ -62,16 +68,16 @@ all inevitably changes.
 
 #### postcss.config.js 
   - using an array to pass in tailwind and autoprefixer. As I understand it
-  currently postcss can been seen as the manager while tailwind & autoprefixer
-  do the grunt work.(check this)
+    currently postcss can been seen as the manager while tailwind & autoprefixer
+    do the grunt work.(check this)
 
 #### _includes
   - This folder has base.njk. Link to it through include/base in front matter.
   
 #### posts 
   - This folder includes posts.json. 11ty uses this in the data cascade (I
-  think) anything that is going to apply to files within posts. Might be a good
-  shout to add it here!
+    think) anything that is going to apply to files within posts. Might be a good
+    shout to add it here!
   
   
 ### Plugins
