@@ -1,9 +1,13 @@
 # A starting point for someone who is new to ssg's & 11ty.
-_this project is a work in progress_
+_this project is a work in progress_ 
+
+If you have any experiance I would recommend that you go to 11ty's base starter
+instead. If on the other hand you can identify with what is written below let me
+know :)
 
 ## why?!
 
-I wrote the following into the package.json, happily I think that it sums up the "why"
+The following is in the package.json, happily I think that it sums up the "why"
 in this case fairly well. (consider it the tl;dr).
 
 "A spring board for projects, which aims to be good for a beginner who enjoys
@@ -112,7 +116,13 @@ the following things caught me out ...
 ### & things I don't understand yet aka off beat questions
 
 - What is purge doing and how does it work in the tailwind.config.js file?
-
 - I would like to have as simple a package.json as possible... well
 clear at least. What does ELEVENTY_PRODUCTION=true do and what does NODE_ENV=production
 do/mean exactly?
+
+## all credit and inspiration go to:
+
+11ty's base starter project + some others(jet),
+tailwind docs, 
+css tricks 
+and an idea about combining web accessibility standards with brutalist design.	
