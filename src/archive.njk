@@ -1,13 +1,15 @@
 ---
 layout: layouts/base
-title: archive
+title: vault
+permalink: /vault/
 eleventyNavigation:
-  key: archive
+  key: vault
   order: 2
 ---
-you have arrived at the vault enter at your own peril
+You have arrived at the vault go further only at your own peril
 
 {% set postslist = collections.posts %}
 <p>The vault currently contains <span>{{ postslist.length }}</span> posts</p>
 
 {% include "postslist.njk" %}
+

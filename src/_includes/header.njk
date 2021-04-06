@@ -6,11 +6,10 @@
 
 {%- for entry in collections.all | eleventyNavigation %}
 	<li class="inline text-lg pr-4" {% if entry.url == page.url %} aria-current="page" {% endif %}>
-		<a class ="text-blue-500 hover:underline" href="{{ entry.url | url }}">{{ entry.title }}</a>
+		<a class="text-blue-600 hover:underline" href="{{ entry.url | url }}">{{ entry.title }}</a>
 	</li>
 {%- endfor %}
 
 </ul>
 </nav>
 </header>
-

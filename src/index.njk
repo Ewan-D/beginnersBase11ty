@@ -5,9 +5,10 @@ eleventyNavigation:
   key: home
   order: 1
 ---
-<h2>it includes the following:</h2>
+
+<p>the latest post is:</p>
 
 {% set postslist = collections.posts | top(1) %}
 {% include "postslist.njk" %}
 
-<p>and this is a little info to tell you all about it! Count to three yip ee dee</p>
+<p>If you like you can find more posts in the <a class="text-blue-600 hover:underline"  href="{{ '/vault/' | url }}">vault</a>. Count to three yip ee dee</p>

@@ -28,12 +28,12 @@ about. And so...
 - deploy= Netlify
 
 The great thing about 11ty is that if/when in the future I decide to change all
-the above I can. For now it is what I am sticking with the in the spirit
-of 'getting on with it!'
+the above I can. For now it is what I am sticking with in the spirit of 'getting
+on with it!'
 
-Anybody else struggle with decision making?
+The struggle with decision making is an ongoing battle. Wait, is it?...
 
-## the aim
+## what's the plan?
 
 Make a base for a website with blog/nav/media/ functionality that has potential
 to scale and adapt to future web projects.
@@ -56,6 +56,11 @@ all inevitably changes.
 
 ### files and folders:
 
+#### index.njk
+  - uses a custom filter (found in .eleventy.js) to get the top(num) from an
+    array in this case the posts. the filter differs from 11tys in an attempt to
+    make it more readable, to my eyes.(I am sure this won't backfire...)
+
 #### _data
   - this folder includes a file named 'data.json' for the sites metadata to use
     in the head for example: <meta name="author" content="{{ meta.author.name
@@ -77,6 +82,11 @@ all inevitably changes.
 
 #### _includes
   - This folder has base.njk. Link to it through include/base in front matter.
+
+#### postslist.njk
+  - uses 11tys collection method to list posts with a nunjucks for loop. this
+    differs from base 11tys by using a numbering system within the loop instead
+    of in css. More potential for styling with tailwind here.
   
 #### posts 
   - This folder includes posts.json. 11ty uses this in the data cascade (I
@@ -122,7 +132,8 @@ do/mean exactly?
 
 ## all credit and inspiration go to:
 
-11ty's base starter project + some others(jet),
+11ty's base starter project + some others(jet), 
 tailwind docs, 
 css tricks 
-and an idea about combining web accessibility standards with brutalist design.	
+and an idea about combining web accessibility standards and brutalist design with an
+ssg I can eventualy fire .org files at.
