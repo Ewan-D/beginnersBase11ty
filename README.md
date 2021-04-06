@@ -127,8 +127,11 @@ the following things caught me out ...
 
 - What is purge doing and how does it work in the tailwind.config.js file?
 - I would like to have as simple a package.json as possible... well
-clear at least. What does ELEVENTY_PRODUCTION=true do and what does NODE_ENV=production
-do/mean exactly?
+  clear at least. What does ELEVENTY_PRODUCTION=true do and what does NODE_ENV=production
+  do/mean exactly?
+- something screwy is going on with the templates... for some reason list
+  styling is not working on the header and footer componants as they are via
+  includes, however they do work if loaded in via another template. FIX NEEDED
 
 ## all credit and inspiration go to:
 
