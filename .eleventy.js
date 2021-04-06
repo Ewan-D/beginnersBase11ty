@@ -6,9 +6,15 @@ module.exports = function(eleventyConfig){
 
     eleventyConfig.addPlugin(pluginNavigation);
 
+    //get the top "num" in an array eg the top 2 posts for the index...
+    eleventyConfig.addFilter("top", (array, num) =>{
+        num = -Math.abs(num)
+        return array.slice(num)
+    });
+
     //luxon date formating
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toFormat("dd LL yyyy")
+        return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toFormat("dd LLL yyyy")
     })
     //and make it accessible for html standards: datetime="yyyy-LL-dd"
     eleventyConfig.addFilter("dateToString", dateObj => {

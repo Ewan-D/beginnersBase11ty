@@ -1,0 +1,13 @@
+
+{% set postCounter = collections.posts.length %}
+
+<ul>
+{%- for post in postslist | reverse %}
+	<li>
+      <span>#{{ postCounter }}</span>
+      <a class="text-blue-500 hover:underline" href="{{post.url}}">{{ post.data.title }}</a>
+      <time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time>
+  </li>
+{% set postCounter = postCounter - 1 %}
+{%- endfor %}
+</ul>

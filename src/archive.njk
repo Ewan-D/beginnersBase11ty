@@ -5,4 +5,9 @@ eleventyNavigation:
   key: archive
   order: 2
 ---
-the vault is here enter at your own peril
+you have arrived at the vault enter at your own peril
+
+{% set postslist = collections.posts %}
+<p>The vault currently contains <span>{{ postslist.length }}</span> posts</p>
+
+{% include "postslist.njk" %}
