@@ -8,7 +8,7 @@ eleventyNavigation:
 
 <p>the latest post is:</p>
 
-{% set postslist = collections.posts | top(1) %}
+{% set postslist = collections.post | top(1) %}
 {% include "postslist.njk" %}
 
 <p>If you like you can find more posts in the <a class="text-blue-600 hover:underline"  href="{{ '/vault/' | url }}">vault</a>. Count to three yip ee dee</p>
