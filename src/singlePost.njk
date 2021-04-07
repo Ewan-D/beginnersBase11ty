@@ -1,0 +1,29 @@
+---
+layout: layouts/post
+title: singlePost
+pagination:
+  data: collections.posts
+  size: 2
+---
+
+
+{{ content | safe }}
+
+
+
+<p>we have a set of {%  set postslength = collections.posts %} {{ postslength.length }} posts </p>
+
+
+
+<nav aria-labelledby="my-pagination">
+  <h2 id="my-pagination">This is my Pagination</h2>
+  <ol>
+    <li><a href="pagination.href.previous">Previous</a></li>
+{%- for post in pagination.pages %}
+
+    <li><a href="{{ pagination.hrefs[ loop.index0 ] }}"{% if page.url == pagination.hrefs[ loop.index0 ] %} aria-current="page"{% endif %}>Page {{ loop.index }}</a></li>
+{%- endfor %}
+
+    <li><a href="pagination.href.next">Next</a></li>
+  </ol>
+</nav>
