@@ -30,9 +30,14 @@ module.exports = function(eleventyConfig){
 	    "njk",
 	    "html",
 	],
-        dir: {
-            input: "src",
-            output: "dist",
+
+        // pre-process *.html & *.md files using nunjucks
+        markdownTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
+
+    dir: {
+        input: "src",
+        output: "dist",
         }
     };
 };

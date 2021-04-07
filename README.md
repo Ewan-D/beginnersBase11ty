@@ -121,7 +121,13 @@ the following things caught me out ...
 * I don't think that postcss is needed if you have postcss-cli. also for
   consistency can we check postcss --o or -o, both seem to do the same thing.
   (this seems to be correct so I got rid of postcss leaving just poastcss-cli in
-  the dev dependency's also the flags work with just one -)
+* something screwy is going on with the templates... for some reason list
+  styling is not working on the header and footer componants as they are via
+  includes, however they do work if loaded in via another template. FIXED see next bullet
+* I want to keep the above to help anyone in a similiar stick. Silly error I
+  just needed to add nunjucks as the markdown and html template engine in the
+  .eleventy.config.js. in a nut shell, add this line: markDownTemplateEngine:
+  "njk", the dev dependency's also the flags work with just one -)
 
 ### & things I don't understand yet aka off beat questions
 
@@ -129,9 +135,6 @@ the following things caught me out ...
 - I would like to have as simple a package.json as possible... well
   clear at least. What does ELEVENTY_PRODUCTION=true do and what does NODE_ENV=production
   do/mean exactly?
-- something screwy is going on with the templates... for some reason list
-  styling is not working on the header and footer componants as they are via
-  includes, however they do work if loaded in via another template. FIX NEEDED
 
 ## all credit and inspiration go to:
 
