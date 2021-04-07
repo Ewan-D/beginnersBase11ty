@@ -17,13 +17,13 @@ layout: layouts/base
 <ol class="flex flex-row mt-3">
 
   {%- if previousPost %}<li class="inline">
-    <a class="text-blue-600 hover:underline my-4" href="{{ previousPost.url | url }}"><p>< Previous post:</p><p class="pl-1">"{{ previousPost.data.title }}"</p></a>
+    <a class="classicLink my-4" href="{{ previousPost.url | url }}"><p>< Previous post:</p><p class="pl-1">"{{ previousPost.data.title }}"</p></a>
   </li>{% endif %}
 
 {%- if both %}<li class="inline mx-4"></li>{% endif %}
 
   {%- if nextPost %}<li class="inline">
-    <a class="text-blue-600 hover:underline" href="{{ nextPost.url | url }}"><p>Next post:></p><p> "{{ nextPost.data.title }}"</p></a>
+    <a class="classicLink" href="{{ nextPost.url | url }}"><p>Next post:></p><p> "{{ nextPost.data.title }}"</p></a>
   </li>{% endif %}
 </ol>
 
