@@ -24,6 +24,8 @@ module.exports = function(eleventyConfig){
     //copy css to the output
     eleventyConfig.addPassthroughCopy('src/css/style.css');
 
+    //eleventyConfig.setDataDeepMerge('true');
+
     return {
 	templateFormats: [
 	    "md",
