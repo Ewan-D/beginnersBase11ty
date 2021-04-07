@@ -37,6 +37,9 @@ module.exports = function(eleventyConfig){
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
 
+
+        dataTemplateEngine: false,
+
     dir: {
         input: "src",
         output: "dist",
