@@ -5,6 +5,8 @@ If you have any experience I would recommend that you go to 11ty's base starter
 instead. If on the other hand you can identify with what is written below let me
 know :)
 
+- [netlify demo deploy](https://trusting-pasteur-48f806.netlify.app)
+
 ## why?!
 
 The following is in the package.json, happily I think that it sums up the "why"
