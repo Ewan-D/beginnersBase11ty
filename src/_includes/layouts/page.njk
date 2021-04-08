@@ -1,0 +1,12 @@
+---
+layout: layouts/base
+---
+
+{% include "header.njk" %}
+
+<div class="p-2">
+	<h1 class="font-bold text-4xl mt-3 mb-6">{{ title }}</h1>
+    {{ content | safe }}
+</div>
+
+{% include "footer.njk" %}
