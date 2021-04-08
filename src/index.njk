@@ -5,18 +5,18 @@ eleventyNavigation:
   key: home
   order: 1
 ---
-<div class="container max-w-2xl pb-3">
-<p class="italic">A slightly re-imagined mix up and take
-  on <a class="classicLink" href="https://github.com/11ty/eleventy-base-blog">11ty's base-blog</a>
-  that comes with tailwind, a gentle nudge towards brutalist design, Libre
-  Baskerville font family and a rambling readme file.</p>
+<div class="max-w-2xl pb-3">
+    <p class="italic">A slightly re-imagined mix up and take
+        on <a class="classicLink" href="https://github.com/11ty/eleventy-base-blog">11ty's base-blog</a>
+        that comes with tailwind, a gentle nudge towards brutalist design, Libre
+        Baskerville font family and a rambling readme file.</p>
 </div>
 
-<div class="border border-gray p-2 max-w-2xl">
-<h2 class="font-bold text-2xl">the latest post is:</h2>
+<div class="max-w-2xl border border-gray p-2 ">
+    <h2 class="font-bold text-2xl">the latest post is:</h2>
 
-{% set allPost = collections.post | top(1) %}
-{% include "postsList.njk" %}
+    {% set allPost = collections.post | top(1) %}
+    {% include "postsList.njk" %}
 
-<p class="pt-2">Find the rest of them in the <a class="classicLink"  href="/archive/">vault</a></p>
+    <p class="pt-2">Find the rest of them in the <a class="classicLink"  href="/archive/">vault</a></p>
 </div>
