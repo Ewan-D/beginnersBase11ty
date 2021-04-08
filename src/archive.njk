@@ -12,7 +12,7 @@ pagination:
 <p>You have arrived at the vault go further only at your own peril</p>
 
 {% set allPost = collections.post %}
-<p>The vault currently contains <span>{{ postslist.length }}</span> posts</p>
+<p>The vault currently contains <span>{{ allPost.length }}</span> posts</p>
 
 {% include "postsList.njk" %}
 
