@@ -5,17 +5,17 @@
 {%- if nextPost or previousPost %}
 
 <nav class="mt-4" aria-labelledby="post-navigation">
-  <h2 id="post-navigation">post navigation previous/next</h2>
+<h2 id="post-navigation" class="hidden">post navigation previous/next</h2>
 <ol class="flex flex-row mt-3">
 
-  {%- if previousPost %}<li class="inline">
+  {%- if previousPost %}<li>
       <a class="classicLink my-4" href="{{ previousPost.url | url }}"><p>< Previous post:</p>
-          <p class="pl-1">"{{ previousPost.data.title }}"</p></a>
+          <p>"{{ previousPost.data.title }}"</p></a>
   </li>{% endif %}
 
-    {%- if both %}<li class="inline mx-4"></li>{% endif %}
+    {%- if both %}<li class="mx-4"></li>{% endif %}
 
-  {%- if nextPost %}<li class="inline">
+  {%- if nextPost %}<li>
       <a class="classicLink" href="{{ nextPost.url | url }}"><p>Next post:></p>
           <p> "{{ nextPost.data.title }}"</p></a>
   </li>{% endif %}
