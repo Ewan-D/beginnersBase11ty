@@ -15,7 +15,7 @@ eleventyNavigation:
 <div class="border border-gray p-2 max-w-2xl">
 <h2 class="font-bold text-2xl">the latest post is:</h2>
 
-{% set postslist = collections.post | top(1) %}
+{% set allPost = collections.post | top(1) %}
 {% include "postsList.njk" %}
 
 <p class="pt-2">Find the rest of them in the <a class="classicLink"  href="{{ '/vault/' | url }}">vault</a></p>

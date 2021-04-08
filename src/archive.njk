@@ -11,7 +11,7 @@ pagination:
 ---
 <p>You have arrived at the vault go further only at your own peril</p>
 
-{% set postslist = collections.post %}
+{% set allPost = collections.post %}
 <p>The vault currently contains <span>{{ postslist.length }}</span> posts</p>
 
 {% include "postsList.njk" %}
@@ -19,7 +19,7 @@ pagination:
 
 
 
-{# Below are the beginnings of a paginated version of the above 'postslists.njk' please consider a work in progress
+{# Below are the beginnings of a paginated version of the above 'postsLists.njk' please consider a work in progress
 <div class="ml-6 my-2">
 {%- for post in post %}
 

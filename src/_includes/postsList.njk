@@ -2,7 +2,7 @@
 {% set postCounter = collections.post.length %}
 <div class="ml-6 my-2">
 <ul >
-{%- for post in postslist | reverse %}
+{%- for post in allPost | reverse %}
 	<li>
       <span>#{{ postCounter }}</span>
       <a class="classicLink" href="{{post.url}}">{{ post.data.title }}</a>
