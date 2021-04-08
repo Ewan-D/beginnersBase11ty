@@ -1,14 +1,22 @@
 ---
-layout: layouts/base
-title: startHere
+layout: layouts/page
+title: beginnersBase11ty
 eleventyNavigation:
   key: home
   order: 1
 ---
+<div class="container max-w-2xl pb-3">
+<p class="italic">A slightly re-imagined mix up and take
+  on <a class="classicLink" href="https://github.com/11ty/eleventy-base-blog">11ty's base-blog</a>
+  that comes with tailwind, a gentle nudge towards brutalist design, Libre
+  Baskerville font family and a rambling readme file.</p>
+</div>
 
-<p>the latest post is:</p>
+<div class="border border-gray p-2 max-w-2xl">
+<h2 class="font-bold text-2xl">the latest post is:</h2>
 
 {% set postslist = collections.post | top(1) %}
 {% include "postslist.njk" %}
 
-<p>If you like you can find more posts in the <a class="classicLink"  href="{{ '/vault/' | url }}">vault</a>. Count to three yip ee dee</p>
+<p class="pt-2">Find the rest of them in the <a class="classicLink"  href="{{ '/vault/' | url }}">vault</a></p>
+</div>

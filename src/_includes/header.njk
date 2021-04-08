@@ -1,12 +1,12 @@
 
 
 <header> 
-<nav class="p-2 bg-yellow-200">
+<nav class="p-2" aria-labelledby="main-navigation">
 <ul>
 
 {%- for entry in collections.all | eleventyNavigation %}
-	<li class="inline text-lg pr-4" {% if entry.url == page.url %} aria-current="page" {% endif %}>
-		<a class="classicLink" href="{{ entry.url | url }}">{{ entry.title }}</a>
+	<li class="inline pr-4">
+		<a {% if entry.url == page.url %} class="classicLink underline" aria-current="page" {% else %} class="classicLink" {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
 	</li>
 {%- endfor %}
 
