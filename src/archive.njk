@@ -1,10 +1,13 @@
 ---
 layout: layouts/page
 title: vault
-permalink: /vault/
 eleventyNavigation:
   key: vault
   order: 2
+pagination:
+  data: collections.post
+  size: 2
+  alias: post
 ---
 <p>You have arrived at the vault go further only at your own peril</p>
 
@@ -13,3 +16,21 @@ eleventyNavigation:
 
 {% include "postslist.njk" %}
 
+
+
+
+{# Below are the beginnings of a paginated version of the above 'postslists.njk' please consider a work in progress
+<div class="ml-6 my-2">
+{%- for post in post %}
+
+<ul >
+	<li>
+      <span>#{{ loop.index }}</span>
+      <a class="classicLink" href="{{ post.url }}"> {{ post.data.title }}</a>
+      <time datetime="{{ post.data.date | dateToString }}">{{ post.date | readableDate }}</time>
+  </li>
+</ul>
+
+{%- endfor %}
+</div>
+#################################################################################################################}
