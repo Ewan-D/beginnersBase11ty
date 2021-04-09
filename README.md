@@ -26,10 +26,9 @@ build on solid(ish) understanding (hopefully!)"
 3. Pick some tech and most importantly; stick with it! 
 - SSG = 11ty
 - template = Nunjucks
-- style = Tailwind (which in turn will need postcss and autoprefixer but lets
-  not worry to much about that now...)
+- style = Tailwind (which in turn will need postcss and autoprefixer but lets not worry to much about that now...)
 - deploy= Netlify
-+ I really want a Baskerville font available from the get go.
+- Boilerplate with Baskerville font loaded allready to go.
 4. Have a base that I can go to for future projects and actually understanding
    how it all works.
 
@@ -61,6 +60,9 @@ all inevitably changes.
 3) make some stuff in the live environment!
 
 ### files and folders:
+
+My aim was to make everything as readable as possible. As such I put a ton of
+thought into where everything lives and how it is named.
 
 #### index.njk
   - uses a custom filter (found in .eleventy.js) to get the top(num) from an
@@ -113,7 +115,6 @@ all inevitably changes.
 * more on luxon... I also spotted use of the <time> tag. Makes good sense to me!
   11ty's base config also points you in the direction of html standards for
   formatting dates. such as dd-LL-yyyy note hyphen
- 
   
 ### stumblings
 
@@ -137,13 +138,9 @@ the following things caught me out ...
 * correction it was actually nothing to do with the above! Turns out the
   aggressive reset meant that the bullet points where there but off the screen.
   Embarrassing really but I am sure we have all been there at some point...
-
-### & things I don't understand yet aka off beat questions
-
-- What is purge doing and how does it work in the tailwind.config.js file?
-- I would like to have as simple a package.json as possible... well
-  clear at least. What does ELEVENTY_PRODUCTION=true do and what does NODE_ENV=production
-  do/mean exactly?
+* Another embarrassing one! forgot to add <meta name="viewport"
+  content="width=device-width, initial-scale=1.0"> so everything was wonky on
+  mobile... make it mobile first. Again I am sure we have all been there!
 
 ## all credit and inspiration go to:
 
