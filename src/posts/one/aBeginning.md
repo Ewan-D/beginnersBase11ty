@@ -1,6 +1,8 @@
 ---
 title: this is a beginning
 date: 2021-04-03
+tags:
+  - trio
 ---
 
 In the beginning there was a computer and before that there wasn't a computer.

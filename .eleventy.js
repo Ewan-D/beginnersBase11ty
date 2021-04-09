@@ -12,6 +12,8 @@ module.exports = function(eleventyConfig){
         return array.slice(num)
     });
 
+    //add filter for tags here
+
     //luxon date formating
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toFormat("dd LLL yyyy")
@@ -24,7 +26,8 @@ module.exports = function(eleventyConfig){
     //copy css to the output
     eleventyConfig.addPassthroughCopy('src/css/style.css');
 
-    //eleventyConfig.setDataDeepMerge('true');
+    // to find all tags (from .json in post folder) etc
+    eleventyConfig.setDataDeepMerge('true');
 
     return {
 	templateFormats: [
