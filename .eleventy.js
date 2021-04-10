@@ -12,7 +12,10 @@ module.exports = function(eleventyConfig){
         return array.slice(num)
     });
 
-    //add filter for tags here
+    //add filter for tags here you can pass an array or a single string :)
+    eleventyConfig.addFilter("tagFilter", (array, toRemove ) =>{
+            return array.filter(tag => toRemove.indexOf(tag) === -1 );
+    });
 
     //luxon date formating
     eleventyConfig.addFilter("readableDate", dateObj => {

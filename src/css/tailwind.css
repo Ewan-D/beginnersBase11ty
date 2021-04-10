@@ -7,7 +7,33 @@
 @layer base {
     @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
+}
+
+@layer components {
     .classicLink {
         @apply text-blue-600 hover:underline;
     }
+}
+
+@layer utilities {
+
+
+    /* my shot at mimicing the hover effect on the 11ty website */
+    .eleventyTag:hover {
+        color: white;
+        text-shadow: 0 0 2px black;
+	    background: linear-gradient(45deg, violet 2%, 8%, indigo 20%, 32%, lightblue 38%, 44%, lightgreen 50%, 57%, yellow 60%, 71%, orange 74%, 90%, red);
+	    background-size: 900% 100%;
+	    animation: gradient ease-in-out 8s infinite;
+    }
+
+    @keyframes gradient {
+	    0%{
+		    background-position: 0% 50%;
+	    }
+	    50%{
+		    background-position: 100% 0%;
+	    }
+    }
+
 }

@@ -2,7 +2,7 @@
 {% set postCounter = collections.post.length %}
 
 <div class="ml-6 my-2">
-<ul >
+<ul>
 {%- for post in allPost | reverse %}
 
   <li>
@@ -13,11 +13,12 @@
       <div class="inline" aria-labelledby="taglist">
       <h3 class="hidden" id="tagList">tags:</h3>
       <ul class="inline">
-          {%- for tag in tags %}
-              <li class="inline">
+
+                  {% for tag in post.data.tags | tagFilter('post') %}
+              <li class="inline px-1 pt-1 bg-gray-200 eleventyTag">
                   <a>{{ tag }}</a>
               </li>
-          {%- endfor %}
+              {% endfor %}
       </ul>
       </div>
 

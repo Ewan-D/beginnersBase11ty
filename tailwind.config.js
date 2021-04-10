@@ -8,6 +8,7 @@ module.exports = {
     fontFamily: {
       'serif': ['Libre Baskerville', 'ui-serif', 'Georgia', 'Cambria', 'Times', 'serif'],
     },
+
   },
   variants: {
     extend: {},
