@@ -65,9 +65,10 @@ My aim was to make everything as readable as possible. As such I put a ton of
 thought into where everything lives and how it is named.
 
 #### index.njk
-  - uses a custom filter (found in .eleventy.js) to get the top(num) from an
+  - custom filter (found in .eleventy.js) to get the top(num) from an
     array in this case the posts. the filter differs from 11tys in an attempt to
     make it more readable, to my eyes.(I am sure this won't backfire...)
+  - custom 'tagFilter' to filter out a given tag or tags (pass an array if more than one)
 
 #### _data
   - this folder includes a file named 'data.json' for the sites metadata to use
@@ -141,6 +142,11 @@ the following things caught me out ...
 * Another embarrassing one! forgot to add <meta name="viewport"
   content="width=device-width, initial-scale=1.0"> so everything was wonky on
   mobile... make it mobile first. Again I am sure we have all been there!
+* css... classes cant begin with a number? got stuck trying to name 11tyTag
+  class worked for ':elventyTag'. this is a custom class I have added to the
+  tailwind css to recreate the hover effect from 11tys own site. Still a bit of
+  work to do on it but I think spending almost an entire day on this would be
+  over kill!? It was a fun challenge either way:)
 
 ## all credit and inspiration go to:
 
