@@ -1,6 +1,9 @@
 ---
 title: the middle
 date: 2021-04-04
+tags:
+  - trio
+  - ramble
 ---
 
 Well, where were we? Ahh yes, with that computer. And what/where is this all
