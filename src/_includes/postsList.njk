@@ -14,11 +14,12 @@
       <h3 class="hidden" id="tagList">tags:</h3>
       <ul class="inline">
 
-                  {% for tag in post.data.tags | tagFilter('post') %}
+          {% for tag in post.data.tags | tagFilter('post') %}
               <li class="inline px-1 pt-1 bg-gray-200 eleventyTag">
-                  <a>{{ tag }}</a>
+                  {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
-              {% endfor %}
+          {% endfor %}
       </ul>
       </div>
 
