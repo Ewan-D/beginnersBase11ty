@@ -7,7 +7,7 @@ async function imageShortcode(src, alt, sizes){
     let metadata = await Image(src, {
         widths: [300, 600],
         formats: ["avif", "jpeg"],
-        //this might be what you are looking for...
+        //this might be what you are looking for...huzzah!
         outputDir: "./dist/img/"
     });
 
@@ -18,9 +18,10 @@ async function imageShortcode(src, alt, sizes){
         decoding: "async",
         };
 
-
     return Image.generateHTML(metadata, imageAttributes);
 }
+
+
 
 module.exports = function(eleventyConfig){
 
@@ -59,7 +60,6 @@ module.exports = function(eleventyConfig){
 	    "md",
 	    "njk",
 	    "html",
-        "jpg",
 	],
 
         // pre-process *.html & *.md files using nunjucks
