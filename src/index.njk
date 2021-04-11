@@ -12,7 +12,25 @@ eleventyNavigation:
         Baskerville font family and a rambling readme file.</p>
 </div>
 
-{% image "src/images/gitProfilePic.jpg", "photo of author", "(min-width: 30em) 50vw, 100vw" %}
+<div id="pygmPossum">
+{% image "src/images/pygmPossum.jpg", "illustration of pygm possum flying with a red ballon homage to 11ty", "(min-width: 30em) 50vw, 100vw" %}
+</div>
+
+
+  <script>
+    pygmPossum.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        pygmPossum.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 2000) clearInterval(timer);
+
+      }, 20);
+    }
+  </script>
 
 <div class="max-w-2xl border border-gray p-2 ">
     <h2 class="font-bold text-2xl">the latest post is:</h2>
