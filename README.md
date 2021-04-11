@@ -55,7 +55,8 @@ all inevitably changes.
 
 ## my dumb notes on how this works...
 
-1) clone repository and then npm run build
+-1) clone repsoitory and npm install
+1) npm run build
 2) npm run dev
 3) make some stuff in the live environment!
 
