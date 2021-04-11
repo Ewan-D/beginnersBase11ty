@@ -1,10 +1,32 @@
 // eleventy config
 const { DateTime } = require("luxon");
 const pluginNavigation = require("@11ty/eleventy-navigation");
+const Image = require("@11ty/eleventy-img");
+
+async function imageShortcode(src, alt, sizes){
+    let metadata = await Image(src, {
+        widths: [300, 600],
+        formats: ["avif", "jpeg"],
+        //this might be what you are looking for...
+        outputDir: "./dist/img/"
+    });
+
+    let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+        };
+
+
+    return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPlugin(pluginNavigation);
+    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+
 
     //get the top "num" in an array eg the top 2 posts for the index...
     eleventyConfig.addFilter("top", (array, num) =>{
@@ -37,6 +59,7 @@ module.exports = function(eleventyConfig){
 	    "md",
 	    "njk",
 	    "html",
+        "jpg",
 	],
 
         // pre-process *.html & *.md files using nunjucks
