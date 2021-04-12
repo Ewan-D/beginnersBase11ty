@@ -12,6 +12,19 @@ layout: layouts/base
     </div>
         {{ content | safe }}
 
+<div class="inline" aria-labelledby="currentPostsTagsList">
+      <h3 class="hidden" id="tagList">current posts tags list:</h3>
+      <ul class="inline">
+
+          {% for tag in tags | tagFilter('post') %}
+              <li class="inline px-1 bg-gray-200 eleventyTag">
+                  {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
+                  <a href="{{ tagUrl | url }}">{{ tag }}</a>
+              </li>
+          {% endfor %}
+      </ul>
+      </div>
+
 {% include "postsNav.njk" %}
 
 </div>
