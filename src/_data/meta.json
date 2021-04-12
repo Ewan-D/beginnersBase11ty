@@ -1,9 +1,17 @@
 {
     "title": "beginnersBase11ty",
     "description": "spring board for building websites with a rambling readme!",
+    "feed": {
+        "subtitle": "subtitle goes here hey, lets write about ... and...",
+        "filename": "feed.xml",
+        "path": "/feed/atomFeed.xml",
+        "id": "https://site-name-goes-here.com"
+    },
+
     "author": {
         "name": "Ewan-D",
         "email": "ewanduffus@gmail.com",
         "github": "https://github.com/Ewan-D"
     }
+
 }

@@ -1,17 +1,19 @@
 ---
 # Metadata comes from _data/meta.json
+permalink: "{{ meta.feed.path  }}"
+eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ metadata.title }}</title>
-  <subtitle>{{ metadata.subtitle }}</subtitle>
-  <link href="{{ metadata.feedUrl }}" rel="self"/>
-  <link href="{{ metadata.url }}"/>
+  <title>{{ meta.title }}</title>
+  <subtitle>{{ meta.subtitle }}</subtitle>
+  <link href="{{ meta.feedUrl }}" rel="self"/>
+  <link href="{{ meta.url }}"/>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.url }}</id>
+  <id>{{ meta.url }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
-    <email>{{ metadata.author.email }}</email>
+    <name>{{ meta.author.name }}</name>
+    <email>{{ meta.author.email }}</email>
   </author>
   {%- for post in collections.posts %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
