@@ -6,8 +6,11 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>{{ meta.title }}</title>
-  <subtitle>{{ meta.subtitle }}</subtitle>
-  <link href="{{ meta.feedUrl }}" rel="self"/>
+  <subtitle>{{ meta.feed.subtitle }}</subtitle>
+
+  {% set absoluteUrl %}{{ meta.feed.path | url | absoluteUrl(meta.url) }}{% endset %}
+    <link href="{{ absoluteUrl }}" rel="self"/>
+
   <link href="{{ meta.url }}"/>
   <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ meta.url }}</id>
@@ -15,6 +18,7 @@ eleventyExcludeFromCollections: true
     <name>{{ meta.author.name }}</name>
     <email>{{ meta.author.email }}</email>
   </author>
+
   {%- for post in collections.post %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
