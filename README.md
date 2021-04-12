@@ -66,16 +66,16 @@ My aim was to make everything as readable as possible. As such I put a ton of
 thought into where everything lives and how it is named.
 
 #### index.njk
-  - custom filter (found in .eleventy.js) to get the top(num) from an
-    array in this case the posts. the filter differs from 11tys in an attempt to
-    make it more readable, to my eyes.(I am sure this won't backfire...)
+  - custom filter (found in .eleventy.js) to get the top(num) from an array in
+    this case the posts. the filter differs from 11tys in an attempt to make it
+    more readable, that is to my eyes.(I am sure this won't backfire...)
   - custom 'tagFilter' to filter out a given tag or tags (pass an array if more than one)
 
 #### _data
   - this folder includes a file named 'data.json' for the sites metadata to use
-    in the head for example: <meta name="author" content="{{ meta.author.name
-    }}. I am guessing this helps with seo etc? very nice how 11ty's data cascade
-    just sorts this all out!
+    in the head for example: <meta name="author" content="{{ meta.author.name }}
+    as well as for the rss feed. Make sure to update this file to match the
+    details of your site.
 
 #### package.json
   - script "npm run build" to get started. if you are wondering the -o is output
@@ -102,11 +102,17 @@ thought into where everything lives and how it is named.
   - This folder includes posts.json. 11ty uses this in the data cascade (I
     think) anything that is going to apply to files within posts. Might be a good
     shout to add it here!
+
+#### feed
+  - atom/rss feed. links to meta.json in front matter. make sure to update that
+    file with site details for the feed.
   
   
 ### Plugins
 
-* eleventyNavigation 
+* eleventy-navigation 
+* eleventy-img
+* eleventy-plugin-rss
 * luxon (format dates etc) I haven't included this with the dependency's as it
   comes with 11ty. No matter! I would have struggled a whole bunch more to
   figure this out if it wasn't for spotting it in the 11ty base blog
