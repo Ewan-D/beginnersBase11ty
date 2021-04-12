@@ -9,13 +9,13 @@ eleventyExcludeFromCollections: true
   <subtitle>{{ meta.subtitle }}</subtitle>
   <link href="{{ meta.feedUrl }}" rel="self"/>
   <link href="{{ meta.url }}"/>
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.post | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ meta.url }}</id>
   <author>
     <name>{{ meta.author.name }}</name>
     <email>{{ meta.author.email }}</email>
   </author>
-  {%- for post in collections.posts %}
+  {%- for post in collections.post %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
