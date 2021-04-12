@@ -20,7 +20,7 @@ eleventyExcludeFromCollections: true
   </author>
 
   {%- for post in collections.post %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.url) }}{% endset %}
+  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(meta.feed.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
