@@ -11,7 +11,7 @@ module.exports = {
 
     extend: {
       backgroundImage: theme => ( {
-        'pygmPossum': "url('/img/cbe769c4-300.jpeg')"
+        'pygmPossum': "url('/siteImages/pygmPossumSiteLogo.png')"
       })
 
   },
