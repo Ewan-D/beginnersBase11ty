@@ -17,7 +17,7 @@
       <ul  class="flex space-x-2">
 
           {% for tag in post.data.tags | tagFilter('post') %}
-              <li class="mr-2 bg-gray-200 eleventyTag {% if page.url == "/" %} hidden sm:inline {% endif %}">
+              <li class="underline tagged eleventyTag {% if page.url == "/" %} hidden sm:inline {% endif %}">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
