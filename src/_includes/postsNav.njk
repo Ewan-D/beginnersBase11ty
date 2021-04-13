@@ -1,19 +1,20 @@
 
 {%- set nextPost = collections.post | getNextCollectionItem(page) %}
 {%- set previousPost = collections.post | getPreviousCollectionItem(page) %}
-{%- set both = nextPost and previousPost %}
+
+
 {%- if nextPost or previousPost %}
 
-<nav class="mt-4" aria-labelledby="post-navigation">
+<div class="p-1">
+<nav {% if not previousPost %} class="float-right"{% endif %} aria-labelledby="post-navigation max-w-2xl" >
 <h2 id="post-navigation" class="hidden">post navigation previous/next</h2>
-<ol class="flex flex-row mt-3">
+<ol class="flex flex-row justify-between mt-3" >
 
   {%- if previousPost %}<li>
       <a class="classicLink my-4" href="{{ previousPost.url | url }}"><p>< Previous post:</p>
           <p>"{{ previousPost.data.title }}"</p></a>
   </li>{% endif %}
 
-    {%- if both %}<li class="mx-4"></li>{% endif %}
 
   {%- if nextPost %}<li>
       <a class="classicLink" href="{{ nextPost.url | url }}"><p>Next post:></p>
@@ -23,3 +24,4 @@
 
 {%- endif %}
 </nav>
+</div>
