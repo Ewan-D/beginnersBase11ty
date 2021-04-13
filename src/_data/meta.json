@@ -5,7 +5,8 @@
         "subtitle": "subtitle goes here hey, lets write about ... and...",
         "filename": "feed.xml",
         "path": "/feed/atomFeed.xml",
-        "id": "https://example.com/"
+        "id": "https://example.com/",
+        "logo":"/feed/rssLogo.png"
     },
 
     "author": {
