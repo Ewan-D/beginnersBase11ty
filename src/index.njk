@@ -21,12 +21,13 @@ eleventyNavigation:
     </div>
 </div>
 
-
 <div class="max-w-2xl border border-gray px-2 pb-2 ">
-    <h2 class="font-bold text-2xl">the latest post is:</h2>
+    <h2 class="inline font-bold text-2xl">the latest post is:</h2>
+
+    <a href="{{ meta.feed.path }}" ><img class="float-right mt-1" src="{{  meta.feed.logo }}" alt="rss logo and link to feed" width="24px"></a>
 
     {% set allPost = collections.post | top(1) %}
     {% include "postsList.njk" %}
 
-    <p class="pt-2">Find the rest of them in the <a class="classicLink"  href="/archive/">vault</a></p>
+    <p class="pt-2">Find the rest of them in the <a class="classicLink" href="/archive/">vault</a></p>
 </div>
