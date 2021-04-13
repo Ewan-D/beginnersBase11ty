@@ -64,6 +64,8 @@ module.exports = function(eleventyConfig){
 
     //copy css to the output
     eleventyConfig.addPassthroughCopy('src/css/style.css');
+    eleventyConfig.addPassthroughCopy('src/feed/rssLogo.png')
+    eleventyConfig.addPassthroughCopy('src/rssLogo.svg')
 
     // to find all tags (from .json in post folder) etc
     eleventyConfig.setDataDeepMerge('true');
