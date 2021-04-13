@@ -7,7 +7,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 async function imageShortcode(src, alt, sizes){
     let metadata = await Image(src, {
         widths: [300],
-        formats: ["jpeg"],
+        formats: ["jpeg", "png"],
         //this might be what you are looking for...huzzah!
         outputDir: "./dist/img/"
     });
