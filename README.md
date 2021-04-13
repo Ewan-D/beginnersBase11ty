@@ -106,7 +106,9 @@ thought into where everything lives and how it is named.
 #### feed
   - atom/rss feed. links to meta.json in front matter. make sure to update that
     file with site details for the feed.
-  
+
+#### favicon.ico etc
+  - s'all in the deats. update meta.json as you see fit!
   
 ### Plugins
 
