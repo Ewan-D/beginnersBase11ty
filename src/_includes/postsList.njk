@@ -1,23 +1,23 @@
 
 {% set postCounter = collections.post.length %}
 
-<div class="ml-6 my-2" aria-labelledby="posts">
+<div class="leading-8 lg:leading-relaxed lg:ml-6 my-2 " aria-labelledby="posts">
     <h3 class="hidden" id="posts">posts:</h3>
 
 <ul>
 {%- for post in allPost | reverse %}
 
-  <li>
+  <li class="flex flex-wrap space-x-2">
       <span>#{{ postCounter }}</span>
-      <a class="classicLink" href="{{post.url}}">{{ post.data.title }}</a>
+      <a class="classicLink " href="{{post.url}}">{{ post.data.title }}</a>
       <time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time>
 
-      <div class="inline" aria-labelledby="tagList">
-      <h3 class="hidden" id="tagList">tags:</h3>
-      <ul class="inline">
+      <div  aria-labelledby="tagList">
+      <h3 class="lg:hidden {% if page.url == '/archive/' %} hidden {% endif %}" id="tagList">tagged with:</h3>
+      <ul  class="flex space-x-2">
 
           {% for tag in post.data.tags | tagFilter('post') %}
-              <li class="text-lg inline px-1 m-1 bg-gray-200 eleventyTag">
+              <li class="mr-2 bg-gray-200 eleventyTag">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
