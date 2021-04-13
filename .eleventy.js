@@ -3,6 +3,7 @@ const { DateTime } = require("luxon");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 async function imageShortcode(src, alt, sizes){
     let metadata = await Image(src, {
@@ -29,7 +30,7 @@ module.exports = function(eleventyConfig){
     eleventyConfig.addPlugin(pluginNavigation);
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addPlugin(pluginRss);
-
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     //get the top "num" in an array eg the top 2 posts for the index...
     eleventyConfig.addFilter("top", (array, num) =>{
