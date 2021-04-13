@@ -9,9 +9,15 @@ module.exports = {
       'serif': ['Libre Baskerville', 'ui-serif', 'Georgia', 'Cambria', 'Times', 'serif'],
     },
 
+    extend: {
+      backgroundImage: theme => ( {
+        'pygmPossum': "url('/img/cbe769c4-300.jpeg')"
+      })
+
   },
   variants: {
-    extend: {},
+
+    },
   },
   plugins: [],
 }
