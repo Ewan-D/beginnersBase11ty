@@ -17,7 +17,7 @@
       <ul class="inline">
 
           {% for tag in post.data.tags | tagFilter('post') %}
-              <li class="inline px-1 mx-1 bg-gray-200 eleventyTag">
+              <li class="text-lg inline px-1 m-1 bg-gray-200 eleventyTag">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
