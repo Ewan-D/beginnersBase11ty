@@ -8,10 +8,11 @@ title: 'all tags'
       <ul class="inline">
 
           {% for tag in collections.allTags | tagFilter('post') %}
-              <li class="inline px-1 pt-1 bg-gray-200 eleventyTag">
-                  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+              <li class="inline underline tagged eleventyTag">
+                  {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
           {% endfor %}
+
       </ul>
       </div>

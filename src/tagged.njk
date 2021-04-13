@@ -14,10 +14,10 @@ eleventyComputed:
     title: Tagged "{{ tag }}"
 permalink: /tagged/{{ tag | slug }}/
 ---
-<p> welcome to the tags page </p>
 
 {% set allPost = collections[ tag ] %}
 {% include "postsList.njk" %}
 
-
-<a class="classicLink" href={{ '/allTags/' | url }}>all tags</a>
+<div class="p-2">
+<p>Go to <a class="classicLink" href={{ '/allTags/' | url }}>all tags</a></p>
+</div>

@@ -13,11 +13,13 @@ layout: layouts/base
         {{ content | safe }}
 
 <div class="inline" aria-labelledby="currentPostsTagsList">
-      <h3 class="hidden" id="tagList">current posts tags list:</h3>
+{% set checkForTags = tags | tagFilter('post')  %}
+
+      <h3 class="mt-4 font-bold {% if checkForTags == 0 %} hidden {% endif %}" id="tagList">this post is tagged with:</h3>
       <ul class="inline">
 
-          {% for tag in tags | tagFilter('post') %}
-              <li class="inline px-1 bg-gray-200 eleventyTag">
+          {% for tag in checkForTags %}
+              <li class="inline underline tagged eleventyTag">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
