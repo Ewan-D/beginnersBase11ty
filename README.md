@@ -112,7 +112,10 @@ thought into where everything lives and how it is named.
   
 ### Plugins
 
+This has turned into a belt and braces type set up!
+
 * eleventy-navigation 
+* eleventy-syntaxhighlighting - as per the documentation this requires a link to a cdn for styling.
 * eleventy-img
 * eleventy-plugin-rss
 * luxon (format dates etc) I haven't included this with the dependency's as it
