@@ -1,10 +1,12 @@
-// eleventy config
+// lets just get all the eleventy plugins...
+
 const { DateTime } = require("luxon");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
+// Images
 async function imageShortcode(src, alt, sizes){
     let metadata = await Image(src, {
         widths: [300],
@@ -24,6 +26,7 @@ async function imageShortcode(src, alt, sizes){
 }
 
 
+// Okay ready? lets go ->
 
 module.exports = function(eleventyConfig){
 
@@ -58,7 +61,6 @@ module.exports = function(eleventyConfig){
         tagCollection.getAll().forEach(obj => {
             (obj.data.tags || []).forEach(objTag => tagSet.add(objTag));
         });
-
     return [...tagSet];
     });
 
