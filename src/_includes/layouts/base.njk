@@ -5,42 +5,21 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="author" content="{{ meta.author.name }}">
       <meta name="description" content="{{ meta.description }}">
+
       <link rel="shorcut icon" href="/siteImages/favicon.ico" type="image/x-icon" />
       <link rel="apple-touch-icon" href="/siteImages/apple-touch-icon.png" />
 
-
-          <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+      <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
 
 	    <link rel="stylesheet" href="/css/style.css">
       <link rel="alternate" href="{{ meta.feed.path | url  }}" type="application/atom+xml" title="{{ meta.title  }}">
+
 	    <title>{{ title }}</title>
-
-<!-- put this somewhere else goddamit!! -->
-  <style>
-
-    @keyframes example {
-        0%   {left:98%; top:-120%;}
-        100% {left:-60%; top:-140%;}
-    }
-
-    #pygmPossum {
-        z-index: -1;
-        width: 300px;
-        height: 600px;
-        position: relative;
-        animation-name: example;
-        animation-duration: 35s;
-        animation-iteration-count: infinite;
-    } 
-  </style>
-
 
   </head>
     <body class="font-serif">
   	    {{ content | safe }}
       </div>
-
     </body>
 
-     <!-- <div class="max-w-screen-md border-8 border-indigo-100 mx-auto h-screen" > -->
 </html>
