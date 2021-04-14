@@ -26,7 +26,7 @@ async function imageShortcode(src, alt, sizes){
 }
 
 
-// Okay ready? lets go ->
+// Okay ready?, lets go ->
 
 module.exports = function(eleventyConfig){
 
@@ -42,8 +42,8 @@ module.exports = function(eleventyConfig){
     });
 
     //add filter for tags here you can pass an array or a single string :)
-    eleventyConfig.addFilter("tagFilter", (array, toRemove ) =>{
-        return array.filter(tag => toRemove.indexOf(tag) === -1 );
+    eleventyConfig.addFilter("tagFilter", (array, toRemove) =>{
+        return (array || []).filter(tag => toRemove.indexOf(tag) === -1 );
     });
 
     //luxon date formating
