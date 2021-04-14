@@ -3,12 +3,12 @@ layout: layouts/page
 title: 'all tags'
 ---
 
-      <div class="inline" aria-labelledby="taglist">
+      <div aria-labelledby="taglist">
       <h3 class="hidden" id="tagList">tags:</h3>
-      <ul class="inline">
+      <ul class="flex space-x-2">
 
           {% for tag in collections.allTags | tagFilter('post') %}
-              <li class="inline underline tagged eleventyTag">
+              <li class="underline tagged eleventyTag">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>

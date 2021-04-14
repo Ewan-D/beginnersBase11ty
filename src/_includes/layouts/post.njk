@@ -16,10 +16,10 @@ layout: layouts/base
 {% set checkForTags = tags | tagFilter('post')  %}
 
       <h3 class="mt-4 font-bold {% if checkForTags == 0 %} hidden {% endif %}" id="tagList">this post is tagged with:</h3>
-      <ul class="inline">
+      <ul class="flex space-x-2">
 
           {% for tag in checkForTags %}
-              <li class="inline underline tagged eleventyTag">
+              <li class="underline tagged eleventyTag">
                   {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
                   <a href="{{ tagUrl | url }}">{{ tag }}</a>
               </li>
