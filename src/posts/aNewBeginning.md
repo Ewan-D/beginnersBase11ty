@@ -5,4 +5,4 @@ tags:
   - digression
 ---
 
-I dunno, I think that if this is the end I should probably fill out a little more detail while I still have the time!
+I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing...
