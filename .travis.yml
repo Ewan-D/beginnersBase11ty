@@ -3,7 +3,7 @@ node_js:
   - 12
 before_script:
   - npm install @11ty/eleventy -g
-script: npm run build --pathprefix="/"
+script: npm run build --pathprefix="/beginnersBase11ty"
 deploy:
   local-dir: dist
   provider: pages
