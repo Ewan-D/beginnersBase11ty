@@ -4,30 +4,29 @@
 <div class=" " aria-labelledby="posts">
     <h3 class="hidden" id="posts">posts:</h3>
 
-<ul>
-{%- for post in allPost | reverse %}
+  <ul>
+     {%- for post in allPost | reverse %}
 
-  <li class="flex flex-wrap space-x-2 mt-1">
-      <span>#{{ postCounter }}</span>
-      <a class="classicLink " href="{{post.url}}">{{ post.data.title }}</a>
-      <time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time>
+        <li class="flex flex-wrap space-x-2 mt-1">
+          <span>#{{ postCounter }}</span>
+          <a class="classicLink " href="{{post.url}}">{{ post.data.title }}</a>
+          <time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time>
 
-      <div  aria-labelledby="tagList">
-      <h3 class=" hidden " id="tagList">tagged with:</h3>
-      <ul  class="flex space-x-2">
+           <div  aria-labelledby="tagList">
+           <h3 class=" hidden " id="tagList">tagged with:</h3>
+           <ul  class="flex space-x-1">
 
-          {% for tag in post.data.tags | tagFilter('post') %}
-              <li class="underline tagged eleventyTag {% if page.url == "/" %} hidden sm:inline {% endif %}">
-                  {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
-                  <a href="{{ tagUrl | url }}">{{ tag }}</a>
-              </li>
-          {% endfor %}
-      </ul>
-      </div>
+             {% for tag in post.data.tags | tagFilter('post') %}
+                 <li class="underline tagged eleventyTag {% if page.url == "/" %} hidden sm:inline {% endif %}">
+                     {% set tagUrl %}/tagged/{{ tag | slug }}/{% endset %}
+                     <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                 </li>
+             {% endfor %}
+           </ul>
+           </div>
+         </li>
 
-  </li>
-{% set postCounter = postCounter - 1 %}
-{%- endfor %}
-</ul>
+    {% set postCounter = postCounter - 1 %}
+    {%- endfor %}
+   </ul>
 </div>
-    </div>

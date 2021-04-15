@@ -45,16 +45,15 @@ quote across... can you have a guess at what the quote might be?
 let answer = () => {
     let Quote = document.getElementById("UrsulaQuote");
     let clicked = document.getElementById("clickMe");
-    clicked.classList.remove("bg-blue-300")
-    clicked.classList.add("bg-yellow-200")
-    Quote.style.display = "inline";
+    clicked.classList.add("hidden")
+    Quote.classList.remove("hidden")
 };
 </script>
 <div class="flex justify-center">
 <input id="clickMe" class="bg-blue-300 hover:bg-yellow-200 p-1 px-2 my-3 rounded-sm" type="button" onclick="answer()" value="click here to find out" />
 </div>
 
-<div id="UrsulaQuote" class="hidden py-2"> 
+<div id="UrsulaQuote" class="hidden py-3 italic text-gray-700"> 
 <p>When action grows unprofitable, gather information; when information grows
 unprofitable, sleep. <br> - Ursula K. Le Guin</p>
 </div>

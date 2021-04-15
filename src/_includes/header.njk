@@ -1,6 +1,6 @@
 
 
-<header> 
+<header class="border-b border-gray-300">
 <nav class="p-2" aria-labelledby="site-menu">
 <h2 id="site-menu" class="hidden">site menu</h2>
 <ul>
@@ -10,7 +10,6 @@
 		<a {% if entry.url == page.url %} class="classicLink underline" aria-current="page" {% else %} class="classicLink" {% endif %} href="{{ entry.url | url }}">{{ entry.title }}</a>
 	</li>
 {%- endfor %}
-
 
 </ul>
 </nav>

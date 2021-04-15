@@ -28,7 +28,6 @@ build on solid(ish) understanding (hopefully!)"
 - template = Nunjucks
 - style = Tailwind (which in turn will need postcss and autoprefixer but lets not worry to much about that now...)
 - deploy= Netlify
-- Boilerplate with Baskerville font loaded allready to go.
 4. Have a base that I can go to for future projects and actually understanding
    how it all works.
 
@@ -58,7 +57,7 @@ all inevitably changes.
 -1) clone repsoitory and npm install
 1) npm run build
 2) npm run dev
-3) make some stuff in the live environment!
+3) make some stuff 
 
 ### files and folders:
 

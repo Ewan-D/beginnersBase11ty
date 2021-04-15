@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* import Libre Baskerville regular 400, regular 400 italic & bold 700 */
-@layer base {
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-}
-
 /* custom components */
 @layer components {
     .classicLink {
@@ -17,16 +12,16 @@
     }
 }
 
-
 /* my shot at mimicing the hover effect on the 11ty website. This is starting to feel like fan art */
 @layer utilities {
     .eleventyTag:hover{
-            color: white;
-            text-shadow: 0 0 2px black;
-	        background: linear-gradient(45deg, violet 2%, 8%, indigo 20%, 32%, lightblue 38%, 44%, lightgreen 50%, 57%, yellow 60%, 71%, orange 74%, 90%, red);
-	        background-size: 900% 100%;
-	        animation: gradient ease-in-out 8s infinite;
+        color: white;
+        text-shadow: 0 0 2px black;
+	    background: linear-gradient(45deg, violet 2%, 8%, indigo 20%, 32%, lightblue 38%, 44%, lightgreen 50%, 57%, yellow 60%, 71%, orange 74%, 90%, red);
+	    background-size: 900% 100%;
+	    animation: gradient ease-in-out 8s infinite;
     }
+
     @keyframes gradient {
 	    0%{
 		    background-position: 0% 50%;
@@ -47,8 +42,7 @@
     }
 
     @keyframes example {
-        0%   {left:98%; top:-120%;}
-        100% {left:-65%; top:-150%;}
+        0%   {left:98vw; top:-120%;}
+        100% {left:-90vw; top:-150%;}
     }
-
 }

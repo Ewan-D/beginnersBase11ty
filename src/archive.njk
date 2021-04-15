@@ -9,10 +9,11 @@ pagination:
   size: 2
   alias: post
 ---
-<p>You have arrived at the vault go further only at your own peril</p>
+<p>You have arrived at the vault continue at your own peril...</p>
 
 {% set allPost = collections.post %}
-<p>The vault currently contains <span>{{ allPost.length }}</span> posts</p>
+
+<p class="mt-7">The vault currently contains <b>{{ allPost.length }}</b> posts:</p>
 
 {% include "postsList.njk" %}
 
@@ -20,6 +21,7 @@ pagination:
 
 
 {# Below are the beginnings of a paginated version of the above 'postsLists.njk' please consider a work in progress
+
 <div class="ml-6 my-2">
 {%- for post in post %}
 
@@ -33,4 +35,5 @@ pagination:
 
 {%- endfor %}
 </div>
+
 #################################################################################################################}

@@ -5,7 +5,7 @@
 
 {%- if nextPost or previousPost %}
 
-<div class="p-1">
+<div class="mt-7">
 <nav {% if not previousPost %} class="float-right"{% endif %} aria-labelledby="post-navigation max-w-2xl" >
 <h2 id="post-navigation" class="hidden">post navigation previous/next</h2>
 <ol class="flex flex-row justify-between mt-3" >
@@ -16,7 +16,7 @@
   </li>{% endif %}
 
 
-  {%- if nextPost %}<li>
+  {%- if nextPost %}<li class="text-right">
       <a class="classicLink" href="{{ nextPost.url | url }}"><p>Next post:></p>
           <p> "{{ nextPost.data.title }}"</p></a>
   </li>{% endif %}
