@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "eleventy --serve & postcss src/css/tailwind.css -o src/css/style.css -w",
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwind build ./src/css/tailwind.css -o ./dist/css/style.css",
-    "start": "ELEVENTY_PRODUCTION=true eleventy --pathprefix=\"/\" && NODE_ENV=production npx tailwind build ./src/css/tailwind.css -o ./dist/css/style.css"
+    "start": "ELEVENTY_PRODUCTION=true eleventy --pathprefix=\"/beginnersBase11ty/\" && NODE_ENV=production npx tailwind build ./src/css/tailwind.css -o ./dist/css/style.css"
   },
   "author": "Ewan-D",
   "license": "MIT",

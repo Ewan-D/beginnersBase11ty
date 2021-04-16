@@ -6,9 +6,9 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="h-44">
-    <div class="mx-w-2xl text-center max-w-2xl pt-10 py-2">
-      <p class="italic text-gray-700">"A slightly re-imagined mix up and take
+<div class="h-44 mx-w-2xl lg:text-center">
+    <div class="">
+      <p class="italic text-gray-700 mt-12">"A slightly re-imagined mix up and take
         on <a class="classicLink" href="https://github.com/11ty/eleventy-base-blog">11ty's base-blog</a>
         that comes with tailwind, a gentle nudge towards brutalist design, 11tys img/syntax/navigation/rss plugins and a rambling readme file. Oh, and a pygmy possum, holding onto a ballon. Wonder what thats doing there..?"</p>
     </div>
@@ -17,12 +17,12 @@ eleventyNavigation:
     </div>
 </div>
 
-<div class="max-w-2xl border border-gray px-2 pb-2 ">
+<div class="border border-gray px-1.5">
     <h2 class="inline font-bold text-2xl">the latest post is:</h2>
 
     <div aria-labelledby="rssFeedLink" class="float-right">
         <h4 class="hidden" id="rssFeedLink">rss feed link</h4>
-        <a href="{{ meta.feed.path }}" ><img class="mt-1" src="{{  meta.feed.logo }}" alt="rss logo and link to feed" width="24px" title="link to rss feed"></a>
+        <a href="{{ meta.feed.path }}" ><img class="mt-1" src="{{ meta.feed.logo }}" alt="rss logo and link to feed" width="24px" title="link to rss feed"></a>
     </div>
 
         {% set allPost = collections.post | top(1) %}
