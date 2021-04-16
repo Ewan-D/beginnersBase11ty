@@ -7,44 +7,23 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Images
+async function imageShortcode(src, alt, sizes){
+    let metadata = await Image(src, {
+        widths: [300],
+        formats: ["jpeg", "png"],
+        //this might be what you are looking for...huzzah!
+        outputDir: "./dist/img/"
+    });
 
-async function imageShortcode(src, alt) {
-  if(alt === undefined) {
-    // You bet we throw an error on missing alt (alt="" works okay)
-    throw new Error(`Missing \`alt\` on myImage from: ${src}`);
-  }
+    let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async",
+        };
 
-  let metadata = await Image(src, {
-    widths: [300],
-    formats: ["png"],
-    outputDir: "./dist/img/"
-  });
-
-  let data = metadata.png[metadata.png.length - 1];
-  return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+    return Image.generateHTML(metadata, imageAttributes);
 }
-
-
-
-
-//async function imageShortcode(src, alt, sizes){
-//    let metadata = await Image(src, {
-//        widths: [300],
-//        formats: ["jpeg", "png"],
-//        //this might be what you are looking for...huzzah!
-//        outputDir: "./dist/img/"
-//    });
-//
-//    let imageAttributes = {
-//        alt,
-//        sizes,
-//        loading: "lazy",
-//        decoding: "async",
-//        };
-//
-//    return Image.generateHTML(metadata, imageAttributes);
-//}
-
 
 // Okay ready?, lets go ->
 
