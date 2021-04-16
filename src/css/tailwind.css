@@ -30,19 +30,16 @@
 		    background-position: 100% 0%;
 	    }
     }
-
     #pygmPossum {
         z-index: -1;
-        width: 300px;
-        height: 600px;
-        position: relative;
-        animation-name: example;
+        position: absolute;
+        animation-name: enterStageRight;
         animation-duration: 42s;
         animation-iteration-count: infinite;
     }
 
-    @keyframes example {
-        0%   {left:98vw; top:-120%;}
-        100% {left:-90vw; top:-150%;}
+    @keyframes enterStageRight {
+        0%   {left:92vw; top:-80%;}
+        100% {left:-76vw; top:-120%;}
     }
 }

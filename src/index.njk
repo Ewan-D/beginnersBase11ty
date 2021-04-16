@@ -6,13 +6,13 @@ eleventyNavigation:
   order: 1
 ---
 
-<div class="h-44 mx-w-2xl lg:text-center">
-    <div class="">
-      <p class="italic text-gray-700 mt-9 md:mt-14">"A slightly re-imagined mix up and take
+<div class="relative mx-w-2xl lg:text-center pb-8 pt-4">
+      <p class="italic text-gray-700">"A slightly re-imagined mix up and take
         on <a class="classicLink" href="https://github.com/11ty/eleventy-base-blog">11ty's base-blog</a>
-        that comes with tailwind, a gentle nudge towards brutalist design, 11tys img/syntax/navigation/rss plugins and a rambling readme file. Oh, and a pygmy possum, holding onto a ballon. Wonder what thats doing there..?"</p>
-    </div>
-    <div id="pygmPossum" class="absolute">
+        that comes with tailwind, a gentle nudge towards brutalist design, 11tys
+        img/syntax/navigation/rss plugins and a rambling readme file. Oh, and a
+        pygmy possum, holding onto a ballon. How did that get in here..?"</p>
+    <div id="pygmPossum" class="w-screen">
         <img src="{{ meta.siteLogo | url }}" alt="site logo: a pygmy possum holding onto a red ballon inspired by 11ty's possum :)" width="300" />
     </div>
 </div>
@@ -28,6 +28,5 @@ eleventyNavigation:
         {% set allPost = collections.post | top(1) %}
         {% include "postsList.njk" %}
 
-    <p class="pt-2">Find the rest of them in the <a class="classicLink" href="/archive/">vault</a></p>
-
+    <p class="pt-2">Find the rest of them in the <a class="classicLink" href="/archive/">vault.</a></p>
 </div>
