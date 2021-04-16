@@ -48,8 +48,8 @@ Include good enough docs/notes so that I can remember what it is all doing and
 how it works even if I left it for a day or two (swap week/month/year here as you see
 fit..)
 
-A ssg that I can publish too using emacs as a kind of cms. This way I get to
-work in org mode which is one of my favourite things ever :).
+Be able to use with org-publish and blog from emacs (eventually!...one small
+step at a time)
 
 Simplicity that fits my style as it is currently, with enough wiggle room for when that
 all inevitably changes.
@@ -134,6 +134,11 @@ This has turned into a belt and braces type set up!
 
 the following things caught me out ... 
 
+* Image size messing up the ol' lighthouse score... requires additional images
+  with the srcset attribute to fit the dpi of various devices and match the
+  expected resolution. NEEDS FIX the supplied image plugin makes this a breeze
+  but I am currently stuck with a work around situation to get the site working
+  on git hub pages due to the pathprefix url being required.
 * data, data, data if you are wondering what all the {{ path | url }} are doing
   it is helpful for getting things working on github pages using the
   --pathprefix option in the elventy build. check the package.json & .travis.yml
