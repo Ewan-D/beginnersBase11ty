@@ -7,6 +7,7 @@ know :)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f013a778-7d72-48b8-a8e0-62ab984ea301/deploy-status)](https://app.netlify.com/sites/trusting-pasteur-48f806/deploys)
 - [netlify demo deploy](https://trusting-pasteur-48f806.netlify.app)
+- [github pages demo deploy](https://ewan-d.github.io/beginnersBase11ty/)
 
 ## why?!
 
@@ -26,7 +27,8 @@ build on solid(ish) understanding (hopefully!)"
 3. Pick some tech and most importantly; stick with it! 
 - SSG = 11ty
 - template = Nunjucks
-- style = Tailwind (which in turn will need postcss and autoprefixer but lets not worry to much about that now...)
+- style = Tailwind (which in turn will need postcss and autoprefixer but lets
+  not worry to much about that now...)
 - deploy= Netlify
 4. Have a base that I can go to for future projects and actually understanding
    how it all works.
