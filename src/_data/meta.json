@@ -1,7 +1,7 @@
 {
     "title": "beginnersBase11ty",
     "description": "spring board for building websites with a rambling readme!",
-    "siteLogo": "/siteImages/pygmPossumSiteLogo.png",
+    "siteLogo": "/siteImages/pygmPossumSiteLogoOpt.png",
     "feed": {
         "subtitle": "subtitle goes here hey, lets write about ... and...",
         "filename": "feed.xml",
