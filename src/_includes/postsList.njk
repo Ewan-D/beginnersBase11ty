@@ -9,7 +9,7 @@
 
         <li class="flex flex-wrap space-x-2 mt-1">
           <span>#{{ postCounter }}</span>
-          <a class="classicLink " href="{{post.url}}">{{ post.data.title }}</a>
+          <a class="classicLink " href="{{ post.url | url }}">{{ post.data.title }}</a>
           <time datetime="{{ post.date | dateToString }}">{{ post.date | readableDate }}</time>
 
            <div  aria-labelledby="tagList">
