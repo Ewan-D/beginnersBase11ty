@@ -13,7 +13,7 @@ eleventyNavigation:
         img/syntax/navigation/rss plugins and a rambling readme file. Oh, and a
         pygmy possum, holding onto a ballon. How did that get in here..?"</p>
     <div id="pygmPossum" class="w-screen">
-        <img src="{{ meta.siteLogo | url }}" alt="site logo: a pygmy possum holding onto a red ballon inspired by 11ty's possum :)" width="300" />
+        <img src="{{ meta.siteLogo | url }}" alt="site logo: a pygmy possum holding onto a red ballon inspired by 11ty's possum :)" width="300" height="390" />
     </div>
 </div>
 
@@ -22,7 +22,7 @@ eleventyNavigation:
 
     <div aria-labelledby="rssFeedLink" class="float-right">
         <h4 class="hidden" id="rssFeedLink">rss feed link</h4>
-        <a href="{{ meta.feed.path | url }}" ><img class="mt-1" src="{{ meta.feed.logo | url }}" alt="rss logo and link to feed" width="24px" title="link to rss feed"></a>
+        <a href="{{ meta.feed.path | url }}" ><img class="mt-1" src="{{ meta.feed.logo | url }}" alt="rss logo and link to feed" width="24px" height="24px" title="link to rss feed"></a>
     </div>
 
         {% set allPost = collections.post | top(1) %}
