@@ -132,6 +132,16 @@ This has turned into a belt and braces type set up!
 
 the following things caught me out ... 
 
+* data, data, data if you are wondering what all the {{ path | url }} are doing
+  it is helpful for getting things working on github pages using the
+  --pathprefix option in the elventy build. check the package.json & .travis.yml
+  files to see the specific build needed to deploy to github. On that note I
+  came up against an issue with the images plugin and how to pass that prefix to
+  the function as a variable... I think for now you can just amend it in the
+  function after you have your site set up. If you look at the way that I got
+  around the siteLogo etc you will find that after running the image
+  optimisation I copied the file across into siteImages folder and used the
+  passthrough filter.
 * White space in front matter seems to matter! (can I have that hour of my life back please)
 * Not sure why {{ content | safe }} is needed in the body after front matter if
   it is included in a layout. for example my base layout within posts...
