@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="author" content="{{ meta.author.name }}">
+      <meta name="description" content="{{ meta.description }}">
+
+      <link rel="shorcut icon" href="{{ '/siteImages/favicon.ico' | url }}" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="/siteImages/apple-touch-icon.png" />
+
+      <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+	    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+      <link rel="alternate" href="{{ meta.feed.path | url  }}" type="application/atom+xml" title="{{ meta.title }}">
+
+	    <title>{{ title }}</title>
+
+  </head>
+  <body>
+    <div class="max-w-2xl  mx-auto">
+  	    {{ content | safe }}
+    </div>
+  </body>
+</html>
