@@ -703,6 +703,10 @@ video {
   margin-top: 1.75rem;
 }
 
+.mb-7 {
+  margin-bottom: 1.75rem;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
