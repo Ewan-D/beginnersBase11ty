@@ -909,21 +909,21 @@ video {
 
 @-webkit-keyframes enterStageRight {
   0%   {
-    left:92vw; top:-80%;
+    left:190%; top:-80%;
   }
 
   100% {
-    left:-76vw; top:-120%;
+    left:-170%; top:-100%;
   }
 }
 
 @keyframes enterStageRight {
   0%   {
-    left:92vw; top:-80%;
+    left:190%; top:-80%;
   }
 
   100% {
-    left:-76vw; top:-120%;
+    left:-170%; top:-100%;
   }
 }
 
