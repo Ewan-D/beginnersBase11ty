@@ -39,7 +39,7 @@
     }
 
     @keyframes enterStageRight {
-        0%   {transform: translateX(65%) translateY(-50%)}
-        100% {transform: translateX(-55%) translateY(-90%)}
+        0%   {transform: translateX(85%) translateY(-70%)}
+        100% {transform: translateX(-75%) translateY(-90%)}
     }
 }
