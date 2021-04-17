@@ -1,5 +1,4 @@
 # A starting point for someone who is new to ssg's & 11ty.
-_this project is a work in progress_ 
 
 If you have any experience I would recommend that you go to 11ty's base starter
 instead. If on the other hand you can identify with what is written below let me
@@ -37,7 +36,7 @@ The great thing about 11ty is that if/when in the future I decide to change all
 the above I can. For now it is what I am sticking with in the spirit of 'getting
 on with it!'
 
-The struggle with decision making is an ongoing battle. Wait, is it?...
+The struggle with decision making is ongoing. Wait, is it?...
 
 ## what's the plan?
 
@@ -67,10 +66,10 @@ My aim was to make everything as readable as possible. As such I put a ton of
 thought into where everything lives and how it is named.
 
 #### index.njk
-  - custom filter (found in .eleventy.js) to get the top(num) from an array in
-    this case the posts. the filter differs from 11tys in an attempt to make it
-    more readable, that is to my eyes.(I am sure this won't backfire...)
-  - custom 'tagFilter' to filter out a given tag or tags (pass an array if more than one)
+  - filter (found in .eleventy.js) to get the top(num) from an array in this
+    case the posts.
+  - 'tagFilter' to filter out a given tag or tags (pass an array if more than
+    one)
 
 #### _data
   - this folder includes a file named 'data.json' for the sites metadata to use
@@ -136,9 +135,9 @@ the following things caught me out ...
 
 * Image size messing up the ol' lighthouse score... requires additional images
   with the srcset attribute to fit the dpi of various devices and match the
-  expected resolution. NEEDS FIX the supplied image plugin makes this a breeze
-  but I am currently stuck with a work around situation to get the site working
-  on git hub pages due to the pathprefix url being required.
+  expected resolution. The supplied image plugin makes this a breeze but I am
+  currently stuck with a work around situation to get the site working on git
+  hub pages due to the pathprefix url being required.
 * data, data, data if you are wondering what all the {{ path | url }} are doing
   it is helpful for getting things working on github pages using the
   --pathprefix option in the elventy build. check the package.json & .travis.yml
@@ -150,8 +149,8 @@ the following things caught me out ...
   optimisation I copied the file across into siteImages folder and used the
   passthrough filter.
 * White space in front matter seems to matter! (can I have that hour of my life back please)
-* Not sure why {{ content | safe }} is needed in the body after front matter if
-  it is included in a layout. for example my base layout within posts...
+* {{ content | safe }} is needed in the body if it is included in a layout. for
+  example the base layout within posts...
 * postcss needed to be 'built' first? with NODE_ENV and then when running the
   dev environment it seemed to need to follow 'eleventy --serve' command.
 * I don't think that postcss is needed if you have postcss-cli. also for
@@ -163,13 +162,13 @@ the following things caught me out ...
 * I want to keep the above to help anyone in a similar stick. Silly error I
   just needed to add nunjucks as the markdown and html template engine in the
   .eleventy.config.js. in a nut shell, add this line: markDownTemplateEngine:
-  "njk", the dev dependency's also the flags work with just one -)
+  "njk" 
 * correction it was actually nothing to do with the above! Turns out the
   aggressive reset meant that the bullet points where there but off the screen.
   Embarrassing really but I am sure we have all been there at some point...
 * Another embarrassing one! forgot to add <meta name="viewport"
   content="width=device-width, initial-scale=1.0"> so everything was wonky on
-  mobile... make it mobile first. Again I am sure we have all been there!
+  mobile... make it mobile first. Again, I am sure we have all been there!
 * css... classes cant begin with a number? got stuck trying to name 11tyTag
   class worked for ':elventyTag'. this is a custom class I have added to the
   tailwind css to recreate the hover effect from 11tys own site. Still a bit of
@@ -181,5 +180,4 @@ the following things caught me out ...
 11ty's base starter project + some others(jet), 
 tailwind docs, 
 css tricks 
-and an idea about combining web accessibility standards and brutalist design with an
-ssg I can eventually fire .org files at.
+An idea that I could use this with org-publish and blog from emacs :)
