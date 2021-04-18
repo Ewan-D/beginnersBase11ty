@@ -6,9 +6,9 @@ know :)
 
 [![Netlify
 Status](https://api.netlify.com/api/v1/badges/f013a778-7d72-48b8-a8e0-62ab984ea301/deploy-status)](https://app.netlify.com/sites/trusting-pasteur-48f806/deploys)
-This configuration as it is works best with netlify... to get the images
-shortcode working with github you will need to amend its outputDir: in the
-.eleventy.js file.
+
+As it is this site works best with netlify. If you use github pages you will need to amend the outputDir for the images shortcode to get the correct url for your site. For this please see the .eleventy.js file. 
+
 - [netlify demo deploy](https://trusting-pasteur-48f806.netlify.app)
 - [github pages demo deploy](https://ewan-d.github.io/beginnersBase11ty/)
 
