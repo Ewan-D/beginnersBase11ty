@@ -61,10 +61,11 @@ all inevitably changes.
 
 -1) clone repsoitory and npm install
 1) npm run build
-2) npm run dev
-3) nuke all files in the posts and siteimages folders and update the meta.json
-4) make some stuff 
-5) deploy to either github or netlify (this config as it is works best with netlify)
+2) delete all the *.md files in the posts folder (not the .json) nuke all the images in the siteImages folder while your at it!
+3) update meta.json in the _data folder with your sites data
+4) npm run dev
+5) make stuff & test it ...
+6) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
 
 ### files and folders:
 
