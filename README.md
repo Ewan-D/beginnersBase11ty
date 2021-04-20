@@ -65,8 +65,18 @@ all inevitably changes.
 3) update meta.json in the _data folder with your sites data
 4) npm run dev
 5) make stuff & test it ...
-6) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
+6) you will probably want to reset the remote repo to set up your own... git remote set-url <remote-name> <remote-url>
+7) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
 
+### issues you might run into
+* tailwind has a rather aggressive base reset that once you get used to things
+  all good. However, you may be stuck with what to do with styling those
+  markdown files. At this stage I am not sure what the best way around this is
+  ... tailwind does have its own plugin for this situation that takes care of
+  the styling in very beautiful way. For this starter project I am going to
+  leave it blank instead of having to uninstall plugins/delete styling after
+  cloning the repo.
+  
 ### files and folders:
 
 My aim was to make everything as readable as possible. As such I put a ton of
@@ -121,6 +131,7 @@ thought into where everything lives and how it is named.
 
 This has turned into a belt and braces type set up!
 
+* markdown-it anchor/ emoji - lets get the lot in here...
 * eleventy-navigation 
 * eleventy-syntaxhighlighting - as per the documentation this requires a link to a cdn for styling.
 * eleventy-img
