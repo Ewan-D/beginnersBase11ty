@@ -83,10 +83,12 @@ module.exports = function(eleventyConfig){
     });
     eleventyConfig.setLibrary("md", markdownLibrary);
 
-    //copy css to the output
+    //copy css images and js to the output
     eleventyConfig.addPassthroughCopy('src/css/style.css');
     eleventyConfig.addPassthroughCopy('src/feed/rssLogo.png')
     eleventyConfig.addPassthroughCopy('src/siteImages/')
+    eleventyConfig.addPassthroughCopy('src/js/fireworks.js')
+    eleventyConfig.addPassthroughCopy('src/js/todoList.js')
 
     // to find all tags (from .json in post folder) etc
     eleventyConfig.setDataDeepMerge('true');
@@ -96,6 +98,7 @@ module.exports = function(eleventyConfig){
 	    "md",
 	    "njk",
 	    "html",
+        "js"
 	],
 
         // pre-process *.html & *.md files using nunjucks

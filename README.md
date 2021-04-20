@@ -150,7 +150,7 @@ This has turned into a belt and braces type set up!
 ### stumblings
 
 the following things caught me out ... 
-
+* Put your custom js into the _includes folder (in assets for this one) you can then use {% include <fileName> %} and don't forget that final %!
 * Image size messing up the ol' lighthouse score... requires additional images
   with the srcset attribute to fit the dpi of various devices and match the
   expected resolution. The supplied image plugin makes this a breeze but I am

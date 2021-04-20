@@ -16,3 +16,26 @@ its origin or that of the man's.
 
 
 :heart:
+
+
+if this is the beginning I should probably make myself a todo list so I can keep
+on track with everything... lets program one in javascript.
+
+
+<div class="pt-7">
+<h1>This is the todo list</h1>
+
+<input id="todoItem" type="text" placeholder="add a todo item..." />
+<input type="submit" value="add" onclick="addToList()" />
+
+<ol id="todoList" labelledby="List">
+</ol>
+
+   <input type="submit" value="clear list" onclick="finished(); stopFw();return false" />
+
+   <a href="#" onclick="stopFw();return false">stop fireworks</a>
+</div>
+
+
+<script>{% include "assets/js/fireworks.js" %}</script>
+<script>{% include "assets/js/todoList.js" %}</script>
