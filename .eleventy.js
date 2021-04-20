@@ -5,6 +5,10 @@ const pluginNavigation = require("@11ty/eleventy-navigation");
 const Image = require("@11ty/eleventy-img");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
+const markdownItEmoji = require("markdown-it-emoji");
+
 
 // Images
 async function imageShortcode(src, alt, sizes){
@@ -35,27 +39,27 @@ module.exports = function(eleventyConfig){
     eleventyConfig.addPlugin(pluginRss);
     eleventyConfig.addPlugin(syntaxHighlight);
 
-    //get the top "num" in an array eg the top 2 posts for the index...
+    // get the top "num" in an array eg the top 2 posts for the index...
     eleventyConfig.addFilter("top", (array, num) =>{
         num = -Math.abs(num)
         return array.slice(num)
     });
 
-    //add filter for tags here you can pass an array or a single string :)
+    // add filter for tags here you can pass an array or a single string :)
     eleventyConfig.addFilter("tagFilter", (array, toRemove) =>{
         return (array || []).filter(tag => toRemove.indexOf(tag) === -1 );
     });
 
-    //luxon date formating
+    // luxon date formating
     eleventyConfig.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toFormat("dd LLL yyyy")
     })
-    //and make it good for the <time> tag: datetime="yyyy-LL-dd"
+    // and make it good for the <time> tag: datetime="yyyy-LL-dd"
     eleventyConfig.addFilter("dateToString", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'UTC'}).toFormat("yyyy-LL-dd")
     })
 
-    //below is almost a copy and paste job... got stuck here
+    // below is almost a copy and paste job... got stuck here
     eleventyConfig.addCollection("allTags", tagCollection => {
         let tagSet = new Set();
         tagCollection.getAll().forEach(obj => {
@@ -64,6 +68,20 @@ module.exports = function(eleventyConfig){
     return [...tagSet];
     });
 
+    //  Customize markdown library and settings:
+    let markdownLibrary = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true,
+        typographer: true,
+    }).use(markdownItAnchor, {
+        permalink: true,
+        permaClass: "direct-link",
+        permalinkSymbol: '#',
+    }).use(markdownItEmoji, {
+
+    });
+    eleventyConfig.setLibrary("md", markdownLibrary);
 
     //copy css to the output
     eleventyConfig.addPassthroughCopy('src/css/style.css');

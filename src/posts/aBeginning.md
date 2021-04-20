@@ -9,5 +9,10 @@ In the beginning there was a computer and before that there wasn't a computer.
 Hold on, before the beginning? Yeah lets not worry about that right now please,
 we will be heading around in circles before to long and ...
 
+## lets start over
+
 In the beginning there was a computer and a man with an idea. Don't fret about
 its origin or that of the man's.
+
+
+:heart:
