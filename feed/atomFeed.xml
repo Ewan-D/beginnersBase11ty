@@ -7,7 +7,7 @@
     <link href="/beginnersBase11ty/feed/atomFeed.xml" rel="self"/>
 
   <link href=""/>
-  <updated>2021-04-19T14:33:56Z</updated>
+  <updated>2021-04-20T09:32:50Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Ewan-D</name>
@@ -19,11 +19,13 @@
     <link href="https://example.com/beginnersBase11ty/posts/aBeginning/"/>
     <updated>2021-04-03T00:00:00Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aBeginning/</id>
-    <content type="html">&lt;p&gt;In the beginning there was a computer and before that there wasn&#39;t a computer.
-Hold on, before the beginning? Yeah lets not worry about that right now please,
-we will be heading around in circles before to long and ...&lt;/p&gt;
-&lt;p&gt;In the beginning there was a computer and a man with an idea. Don&#39;t fret about
-its origin or that of the man&#39;s.&lt;/p&gt;
+    <content type="html">&lt;p&gt;In the beginning there was a computer and before that there wasn’t a computer.&lt;br /&gt;
+Hold on, before the beginning? Yeah lets not worry about that right now please,&lt;br /&gt;
+we will be heading around in circles before to long and …&lt;/p&gt;
+&lt;h2 id=&quot;lets-start-over&quot;&gt;lets start over &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/beginnersBase11ty/posts/aBeginning/#lets-start-over&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;In the beginning there was a computer and a man with an idea. Don’t fret about&lt;br /&gt;
+its origin or that of the man’s.&lt;/p&gt;
+&lt;p&gt;❤️&lt;/p&gt;
 </content>
   </entry>
   
@@ -32,10 +34,10 @@ its origin or that of the man&#39;s.&lt;/p&gt;
     <link href="https://example.com/beginnersBase11ty/posts/aMiddle/"/>
     <updated>2021-04-04T00:00:00Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aMiddle/</id>
-    <content type="html">&lt;p&gt;Well, where were we? Ahh yes, with that computer. And what/where is this all
-going I hear you eagerly demand. Well dear reader I will tell you; ideas were
-beginning to form, bubbling up, surfacing in waves and such like, such like,
-like eh, things, marvellous wonderful... things, resonating with sonorous energy
+    <content type="html">&lt;p&gt;Well, where were we? Ahh yes, with that computer. And what/where is this all&lt;br /&gt;
+going I hear you eagerly demand. Well dear reader I will tell you; ideas were&lt;br /&gt;
+beginning to form, bubbling up, surfacing in waves and such like, such like,&lt;br /&gt;
+like eh, things, marvellous wonderful… things, resonating with sonorous energy&lt;br /&gt;
 and potential. Great scott man imagine what could be achieved?!&lt;/p&gt;
 </content>
   </entry>
@@ -45,7 +47,7 @@ and potential. Great scott man imagine what could be achieved?!&lt;/p&gt;
     <link href="https://example.com/beginnersBase11ty/posts/aEnd/"/>
     <updated>2021-04-05T00:00:00Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aEnd/</id>
-    <content type="html">&lt;p&gt;Well. hey! what was that? was that it? can we go home now? Maybe. but you know I
+    <content type="html">&lt;p&gt;Well. hey! what was that? was that it? can we go home now? Maybe. but you know I&lt;br /&gt;
 doubt it very much.&lt;/p&gt;
 </content>
   </entry>
@@ -53,26 +55,26 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>and another thing</title>
     <link href="https://example.com/beginnersBase11ty/posts/aNewBeginning/"/>
-    <updated>2021-04-19T14:33:56Z</updated>
+    <updated>2021-04-20T09:32:50Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aNewBeginning/</id>
-    <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing…&lt;/p&gt;
 </content>
   </entry>
   
   <entry>
     <title>Lets do some programming!</title>
     <link href="https://example.com/beginnersBase11ty/posts/letsMakeAProgram/"/>
-    <updated>2021-04-19T14:33:56Z</updated>
+    <updated>2021-04-20T09:32:50Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/letsMakeAProgram/</id>
-    <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting
-to effect the way that I look things. For instance, I am enjoying reading Ursula
-Guin&#39;s &#39;Left Hand Of Darkness&#39; and I stumbled across a quote of hers that seemed
-to translate into a type of conditional loop. Huzzah! An opportunity to throw
-something of a small program together...&lt;/p&gt;
+    <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting&lt;br /&gt;
+to effect the way that I look things. For instance, I am enjoying reading Ursula&lt;br /&gt;
+Guin’s ‘Left Hand Of Darkness’ and I stumbled across a quote of hers that seemed&lt;br /&gt;
+to translate into a type of conditional loop. Huzzah! An opportunity to throw&lt;br /&gt;
+something of a small program together…&lt;/p&gt;
 &lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;whatNext&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;action&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; info&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; profitable &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;// check input for nonsense&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;action &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; info&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        profitable&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;your a wizard on top form!&quot;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;action &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;info&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        profitable&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;action is required&quot;&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token comment&quot;&gt;// this is the heart of the quote...&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token keyword&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;action &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; info&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;           profitable&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;           &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;gather information&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;action &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;info &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br /&gt;           profitable&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;           &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;sleep&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;        &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br /&gt;    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;profitable&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;br /&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Yes I know, there really is no need for the while loop! And the ux leaves
-everything to be desired. It does though get something of the spirit of the
-quote across... can you have a guess at what the quote might be?&lt;/p&gt;
+&lt;p&gt;Yes I know, there really is no need for the while loop! And the ux leaves&lt;br /&gt;
+everything to be desired. It does though get something of the spirit of the&lt;br /&gt;
+quote across… can you have a guess at what the quote might be?&lt;/p&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
 let answer = () =&gt; {
     let Quote = document.getElementById(&quot;UrsulaQuote&quot;);
@@ -94,7 +96,7 @@ unprofitable, sleep. &lt;br /&gt; - Ursula K. Le Guin&lt;/p&gt;
   <entry>
     <title>sketches for the site&#39;s mascot</title>
     <link href="https://example.com/beginnersBase11ty/posts/pygmyPossum/"/>
-    <updated>2021-04-19T14:33:56Z</updated>
+    <updated>2021-04-20T09:32:50Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/pygmyPossum/</id>
     <content type="html">&lt;div class=&quot;mb-7&quot;&gt;
 &lt;picture&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://example.com/img/e40258cd-300.jpeg 300w, https://example.com/img/e40258cd-600.jpeg 600w&quot; sizes=&quot;600&quot; /&gt;&lt;source type=&quot;image/png&quot; srcset=&quot;https://example.com/img/e40258cd-300.png 300w, https://example.com/img/e40258cd-600.png 600w&quot; sizes=&quot;600&quot; /&gt;&lt;img alt=&quot;If this image is not being displayed check the path in the images function in your .eleventy.js file! What you should be able to see here are my original sketches for the site logo&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/e40258cd-300.jpeg&quot; width=&quot;600&quot; height=&quot;449&quot; /&gt;&lt;/picture&gt;

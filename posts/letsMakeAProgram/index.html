@@ -45,17 +45,17 @@
 	<h1 class="font-bold text-4xl mt-3 mb-6">Lets do some programming!</h1>
 
     <div class="mb-3 text-gray-700">
-        <time datetime="2021-04-19">~ 19 Apr 2021</time>
+        <time datetime="2021-04-20">~ 20 Apr 2021</time>
     </div>
-        <p>I have been learning how to do a bit of programming recently and it is starting
-to effect the way that I look things. For instance, I am enjoying reading Ursula
-Guin's 'Left Hand Of Darkness' and I stumbled across a quote of hers that seemed
-to translate into a type of conditional loop. Huzzah! An opportunity to throw
-something of a small program together...</p>
+        <p>I have been learning how to do a bit of programming recently and it is starting<br>
+to effect the way that I look things. For instance, I am enjoying reading Ursula<br>
+Guin’s ‘Left Hand Of Darkness’ and I stumbled across a quote of hers that seemed<br>
+to translate into a type of conditional loop. Huzzah! An opportunity to throw<br>
+something of a small program together…</p>
 <pre class="language-js"><code class="language-js"><span class="token keyword">let</span> <span class="token function-variable function">whatNext</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">action<span class="token punctuation">,</span> info</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span><br><span class="token keyword">let</span> profitable <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><br><span class="token comment">// check input for nonsense</span><br>    <span class="token keyword">if</span><span class="token punctuation">(</span>action <span class="token operator">&amp;&amp;</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><br>        profitable<span class="token operator">++</span><span class="token punctuation">;</span><br>        <span class="token keyword">return</span> <span class="token string">"your a wizard on top form!"</span><br>    <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>action <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>info<span class="token punctuation">)</span><span class="token punctuation">{</span><br>        profitable<span class="token operator">++</span><span class="token punctuation">;</span><br>        <span class="token keyword">return</span> <span class="token string">"action is required"</span><br>    <span class="token punctuation">}</span><br><span class="token comment">// this is the heart of the quote...</span><br>    <span class="token keyword">do</span><span class="token punctuation">{</span><br>        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>action <span class="token operator">&amp;&amp;</span> info<span class="token punctuation">)</span><span class="token punctuation">{</span><br>           profitable<span class="token operator">++</span><span class="token punctuation">;</span><br>           <span class="token keyword">return</span> <span class="token string">"gather information"</span><span class="token punctuation">;</span><br><br>        <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span> <span class="token operator">!</span>action <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>info <span class="token punctuation">)</span> <span class="token punctuation">{</span><br>           profitable<span class="token operator">++</span><span class="token punctuation">;</span><br>           <span class="token keyword">return</span> <span class="token string">"sleep"</span><span class="token punctuation">;</span><br>        <span class="token punctuation">}</span><br>    <span class="token punctuation">}</span><span class="token keyword">while</span><span class="token punctuation">(</span>profitable<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>
-<p>Yes I know, there really is no need for the while loop! And the ux leaves
-everything to be desired. It does though get something of the spirit of the
-quote across... can you have a guess at what the quote might be?</p>
+<p>Yes I know, there really is no need for the while loop! And the ux leaves<br>
+everything to be desired. It does though get something of the spirit of the<br>
+quote across… can you have a guess at what the quote might be?</p>
 <script type="text/javascript">
 let answer = () => {
     let Quote = document.getElementById("UrsulaQuote");
