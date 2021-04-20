@@ -28,5 +28,5 @@ eleventyNavigation:
         {% set allPost = collections.post | top(1) %}
         {% include "postsList.njk" %}
 
-    <p class="pt-2">Find the rest of them in the <a class="classicLink" href="/archive/">vault.</a></p>
+    <p class="pt-2">Find the rest of them in the <a class="classicLink" href="{{ '/archive/' | url }}">vault.</a></p>
 </div>
