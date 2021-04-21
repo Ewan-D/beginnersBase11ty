@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    /* how to style those md files... */
+        .prose h2 {
+            @apply font-bold mt-3 text-xl;
+        }
+        .prose p {
+            @apply mt-2;
+        }
+    }
+
 /* custom components */
 @layer components {
     .classicLink {
@@ -10,6 +20,8 @@
     .tagged {
         @apply mr-2 px-2 bg-gray-200;
     }
+
+
 }
 
 /* my shot at mimicing the hover effect on the 11ty website. This is starting to feel like fan art */
