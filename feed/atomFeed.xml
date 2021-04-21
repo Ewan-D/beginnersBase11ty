@@ -7,7 +7,7 @@
     <link href="/beginnersBase11ty/feed/atomFeed.xml" rel="self"/>
 
   <link href=""/>
-  <updated>2021-04-21T15:52:35Z</updated>
+  <updated>2021-04-21T19:47:07Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Ewan-D</name>
@@ -15,21 +15,22 @@
   </author>
   
   <entry>
-    <title>this is a beginning</title>
+    <title>If this is a beginning</title>
     <link href="https://example.com/beginnersBase11ty/posts/aBeginning/"/>
     <updated>2021-04-03T00:00:00Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aBeginning/</id>
     <content type="html">&lt;p&gt;In the beginning there was a computer and before that there wasn’t a computer.
-Hold on, before the beginning? Yeah lets not worry about that right now please,
-we will be heading around in circles before to long and …&lt;/p&gt;
+Hold on, before the beginning? Yeah lets not worry about that right now, please,
+we will be heading around in circles before to long and so on and so on …&lt;/p&gt;
 &lt;h2 id=&quot;lets-start-over&quot;&gt;lets start over &lt;a class=&quot;header-anchor&quot; href=&quot;https://example.com/beginnersBase11ty/posts/aBeginning/#lets-start-over&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;In the beginning there was a computer and a man with an idea. Don’t fret about
 its origin or that of the man’s.&lt;/p&gt;
 &lt;p&gt;❤️&lt;/p&gt;
 &lt;p&gt;‘If this is the beginning,’ the man pondered, &#39;I should probably make myself a
 list so I can keep a track of everything. He tapped a pencil idly on a note pad
-for a moment or two. ‘I could even use this computer to help!’. The computer
-beeped at him indifferently. 💻&lt;/p&gt;
+for a moment or two, then in a fit of inspiration he tossed them aside and
+exclaimed, ‘I could even use this computer to help!’. The computer beeped at him
+indifferently. 💻&lt;/p&gt;
 &lt;p&gt;He fumbled around with the computer for a while, red error messages popping up,
 filling the screen. After a short while, eh, correction here… after days of
 confusion, coffee and cursing, he was happy enough with what he had done. ‘Okay,
@@ -44,7 +45,7 @@ computer; lets begin!’&lt;/p&gt;
 &lt;input type=&quot;submit&quot; class=&quot;px-1 text-white bg-green-400 hover:bg-green-300&quot; value=&quot;add&quot; onclick=&quot;addToList()&quot; /&gt;
 &lt;/div&gt;
 &lt;input id=&quot;clearList&quot; class=&quot;px-1 mt-3 text-white bg-red-400 hover:bg-red-300&quot; type=&quot;submit&quot; value=&quot;clear list&quot; style=&quot;display:none;&quot; onclick=&quot;finished();&quot; /&gt;
-&lt;input id=&quot;toggleFx&quot; class=&quot;px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500&quot; type=&quot;submit&quot; value=&quot;Nice job! Click here to make another list... and on, and on...&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
+&lt;input id=&quot;toggleFx&quot; class=&quot;px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500&quot; type=&quot;submit&quot; value=&quot;Nice job! Click here to make another list...&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
 &lt;/div&gt;
 &lt;script&gt;/**
   * You may use this code for free on any web page provided that
@@ -231,7 +232,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>and another thing</title>
     <link href="https://example.com/beginnersBase11ty/posts/aNewBeginning/"/>
-    <updated>2021-04-21T15:52:35Z</updated>
+    <updated>2021-04-21T19:47:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aNewBeginning/</id>
     <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing…&lt;/p&gt;
 </content>
@@ -240,7 +241,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>Lets do some programming!</title>
     <link href="https://example.com/beginnersBase11ty/posts/letsMakeAProgram/"/>
-    <updated>2021-04-21T15:52:35Z</updated>
+    <updated>2021-04-21T19:47:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/letsMakeAProgram/</id>
     <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting
 to effect the way that I look things. For instance, I am enjoying reading Ursula
@@ -272,7 +273,7 @@ unprofitable, sleep. &lt;br /&gt; - Ursula K. Le Guin&lt;/p&gt;
   <entry>
     <title>sketches for the site&#39;s mascot</title>
     <link href="https://example.com/beginnersBase11ty/posts/pygmyPossum/"/>
-    <updated>2021-04-21T15:52:35Z</updated>
+    <updated>2021-04-21T19:47:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/pygmyPossum/</id>
     <content type="html">&lt;div class=&quot;mb-7&quot;&gt;
 &lt;picture&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://example.com/img/e40258cd-300.jpeg 300w, https://example.com/img/e40258cd-600.jpeg 600w&quot; sizes=&quot;600&quot; /&gt;&lt;source type=&quot;image/png&quot; srcset=&quot;https://example.com/img/e40258cd-300.png 300w, https://example.com/img/e40258cd-600.png 600w&quot; sizes=&quot;600&quot; /&gt;&lt;img alt=&quot;If this image is not being displayed check the path in the images function in your .eleventy.js file! What you should be able to see here are my original sketches for the site logo&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/e40258cd-300.jpeg&quot; width=&quot;600&quot; height=&quot;449&quot; /&gt;&lt;/picture&gt;
