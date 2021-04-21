@@ -22,20 +22,24 @@ if this is the beginning I should probably make myself a todo list so I can keep
 on track with everything... lets program one in javascript.
 
 
-<div class="pt-7 ">
-<h1 class="font-bold">Todo list:</h1>
+<div class="mt-7 p-2 max-w-xl border border-indigo-200">
 
-<input id="todoItem" class="px-1" type="text" placeholder="add a todo item here..." />
-<input type="submit" class="px-1" value="add" onclick="addToList()" />
+
+<input id="makeTodoList" class="block mx-auto mt-3 px-2" type="submit" value="Okay, its time to make a list!" onclick="startItemMaker()"/>
+
+<div id="itemMaker" style="display:none">
+<h1 class="font-bold">Todo list:</h1>
+<input id="todoItem" class="px-1 text-white bg-gray-400" type="text" placeholder="add a todo item here..." />
+<input type="submit" class="px-1 text-white bg-green-400 hover:bg-green-300" value="add" onclick="addToList()" />
+</div>
 
 <ol id="todoList" class="pt-3" labelledby="List">
 </ol>
 
-<input id="newList" class="hidden" type="submit" value="clear list" onclick="finished(); stopFw();return false" />
+<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished(); stopFw();return false" />
 
-<a class="hidden" onclick="stopFw();return false">stop fireworks</a>
+<input id="toggleFx" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="new list?" style="display:none;" onclick="finished(); stopFw();return false">
 </div>
-
 
 <script>{% include "assets/js/fireworks.js" %}</script>
 <script>{% include "assets/js/todoList.js" %}</script>
