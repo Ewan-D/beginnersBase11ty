@@ -7,7 +7,7 @@
     <link href="/beginnersBase11ty/feed/atomFeed.xml" rel="self"/>
 
   <link href=""/>
-  <updated>2021-04-21T11:09:50Z</updated>
+  <updated>2021-04-21T13:15:44Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Ewan-D</name>
@@ -28,14 +28,17 @@ its origin or that of the man’s.&lt;/p&gt;
 &lt;p&gt;❤️&lt;/p&gt;
 &lt;p&gt;if this is the beginning I should probably make myself a todo list so I can keep&lt;br /&gt;
 on track with everything… lets program one in javascript.&lt;/p&gt;
-&lt;div class=&quot;pt-7 &quot;&gt;
+&lt;div class=&quot;mt-7 p-2 max-w-xl border border-indigo-200&quot;&gt;
+&lt;input id=&quot;makeTodoList&quot; class=&quot;block mx-auto mt-3 px-2&quot; type=&quot;submit&quot; value=&quot;Okay, its time to make a list!&quot; onclick=&quot;startItemMaker()&quot; /&gt;
+&lt;div id=&quot;itemMaker&quot; style=&quot;display:none&quot;&gt;
 &lt;h1 class=&quot;font-bold&quot;&gt;Todo list:&lt;/h1&gt;
-&lt;input id=&quot;todoItem&quot; class=&quot;px-1&quot; type=&quot;text&quot; placeholder=&quot;add a todo item here...&quot; /&gt;
-&lt;input type=&quot;submit&quot; class=&quot;px-1&quot; value=&quot;add&quot; onclick=&quot;addToList()&quot; /&gt;
+&lt;input id=&quot;todoItem&quot; class=&quot;px-1 text-white bg-gray-400&quot; type=&quot;text&quot; placeholder=&quot;add a todo item here...&quot; /&gt;
+&lt;input type=&quot;submit&quot; class=&quot;px-1 text-white bg-green-400 hover:bg-green-300&quot; value=&quot;add&quot; onclick=&quot;addToList()&quot; /&gt;
+&lt;/div&gt;
 &lt;ol id=&quot;todoList&quot; class=&quot;pt-3&quot; labelledby=&quot;List&quot;&gt;
 &lt;/ol&gt;
-&lt;input id=&quot;newList&quot; class=&quot;hidden&quot; type=&quot;submit&quot; value=&quot;clear list&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
-&lt;p&gt;&lt;a class=&quot;hidden&quot; onclick=&quot;stopFw();return false&quot;&gt;stop fireworks&lt;/a&gt;&lt;/p&gt;
+&lt;input id=&quot;clearList&quot; class=&quot;px-1 mt-3 text-white bg-red-400 hover:bg-red-300&quot; type=&quot;submit&quot; value=&quot;clear list&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
+&lt;input id=&quot;toggleFx&quot; class=&quot;px-1 mt-3 text-white bg-red-400 hover:bg-red-300&quot; type=&quot;submit&quot; value=&quot;new list?&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
 &lt;/div&gt;
 &lt;script&gt;/**
   * You may use this code for free on any web page provided that
@@ -45,9 +48,12 @@ on track with everything… lets program one in javascript.&lt;/p&gt;
 
 
 /* this has been updated to use in html5 by ewan-d */
+let getNum = () =&gt; Math.floor(Math.random() * 6);
+let colors = [&#39;#ff6699&#39;, &#39;#ffcc99&#39;, &#39;#ffff66&#39;, &#39;#ccffcc&#39;, &#39;#00ffff&#39;, &#39;#ff66ff&#39;, &#39;#ffffff&#39;];
 
-var theObj = &#39;&lt;p style=&quot;font-size:2em; color:#00FF00&quot;&gt;&lt;B&gt;.&lt;/B&gt;&lt;/p&gt;&#39;;
-var numObj = 40, _dl = document.getElementById(&#39;sf&quot;+i+&quot;&#39;), sparks = new Array();
+
+var theObj = &#39;&lt;p style=&quot;font-size:0.75em;&quot;&gt;&lt;B&gt;.&lt;/B&gt;&lt;/p&gt;&#39;;
+var numObj = 42, _dl = document.getElementById(&#39;sf&quot;+i+&quot;&#39;), sparks = new Array();
 
 mx = function(){ return window.pageXOffset ? window.pageXOffset : document.body.scrollLeft; };
 my = function(){ return window.pageYOffset ? window.pageYOffset : document.body.scrollTop; };
@@ -68,6 +74,7 @@ function ani(){
 
 function reset()
 {
+    let color = colors[getNum()];
     var fwX = mx() + 100 + Math.random() * (cx-200), fwY = my() + 100 + Math.random() * (cy-200);
     for(var i=0 ;i&lt;numObj;i++){
         var el=sparks[i]= document.getElementById(&quot;sf&quot;+i) ;
@@ -77,6 +84,7 @@ function reset()
         el.x  = fwX;
         el.y  = fwY;
         _dl ? el.style = el : null;
+        el.style.color = color;
     }
 };
 
@@ -99,14 +107,22 @@ function stopFw()
     }
 }
 &lt;/script&gt;
-&lt;script&gt;const startAgain = document.getElementById(&#39;newList&#39;)
-
-
+&lt;script&gt;
     let input = document.getElementById(&#39;todoItem&#39;);
  	let listCount = 0;
 
 	const todoList = [];
+    const toggleFx = document.getElementById(&#39;toggleFx&#39;);
+    const clearList = document.getElementById(&#39;clearList&#39;);
+    const itemMaker = document.getElementById(&#39;itemMaker&#39;);
+    const makeTodoList = document.getElementById(&#39;makeTodoList&#39;);
+
     // use enter key instead of submit...
+    let startItemMaker = () =&gt; {
+        itemMaker.style.display= &quot;inline&quot;;
+        makeTodoList.style.display= &quot;none&quot;;
+    };
+
     input.addEventListener(&quot;keyup&quot;, event =&gt; {
         if(event.keyCode == 13){
             addToList();
@@ -114,8 +130,12 @@ function stopFw()
     });
 
  	let allDone = () =&gt; {
-		document.body.style.backgroundColor= &#39;black&#39;;
+		document.body.style.background= &#39;linear-gradient(to top, #003366 4%, #ff5050 5% , #ff99cc 6%, #000066 25%, #000 55%)&#39;;
+        document.body.style.height = &#39;100vh&#39;;
 		document.body.style.color= &#39;white&#39;;
+        toggleFx.style.display= &#39;inline&#39;;
+        clearList.style.display= &#39;none&#39;;
+        itemMaker.style.display= &#39;none&#39;;
 	};
 
  	let checkList = () =&gt; {
@@ -134,6 +154,10 @@ function stopFw()
 
 	let addToList = () =&gt; {
 		listCount++;
+        // check this...
+
+            clearList.style.display= &#39;inline&#39;;
+
 
 		let newEl = document.createElement(&#39;li&#39;);
         newEl.classList.add(&#39;flex&#39;, &#39;justify-start&#39;, &#39;p-1&#39;)
@@ -155,12 +179,15 @@ function stopFw()
         }
 
     let finished = () =&gt;{
+        listCount = 0;
         let clearList = document.getElementById(&quot;todoList&quot;);
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
             }
-        document.body.style.backgroundColor= &#39;white&#39;;
+        document.body.style.background= &#39;white&#39;;
         document.body.style.color= &#39;black&#39;;
+        itemMaker.style.display= &#39;inline&#39;;
+        toggleFx.style.display= &#39;none&#39;;
         }
 &lt;/script&gt;
 </content>
@@ -192,7 +219,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>and another thing</title>
     <link href="https://example.com/beginnersBase11ty/posts/aNewBeginning/"/>
-    <updated>2021-04-21T11:09:50Z</updated>
+    <updated>2021-04-21T13:15:44Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aNewBeginning/</id>
     <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing…&lt;/p&gt;
 </content>
@@ -201,7 +228,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>Lets do some programming!</title>
     <link href="https://example.com/beginnersBase11ty/posts/letsMakeAProgram/"/>
-    <updated>2021-04-21T11:09:50Z</updated>
+    <updated>2021-04-21T13:15:44Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/letsMakeAProgram/</id>
     <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting&lt;br /&gt;
 to effect the way that I look things. For instance, I am enjoying reading Ursula&lt;br /&gt;
@@ -233,7 +260,7 @@ unprofitable, sleep. &lt;br /&gt; - Ursula K. Le Guin&lt;/p&gt;
   <entry>
     <title>sketches for the site&#39;s mascot</title>
     <link href="https://example.com/beginnersBase11ty/posts/pygmyPossum/"/>
-    <updated>2021-04-21T11:09:50Z</updated>
+    <updated>2021-04-21T13:15:44Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/pygmyPossum/</id>
     <content type="html">&lt;div class=&quot;mb-7&quot;&gt;
 &lt;picture&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://example.com/img/e40258cd-300.jpeg 300w, https://example.com/img/e40258cd-600.jpeg 600w&quot; sizes=&quot;600&quot; /&gt;&lt;source type=&quot;image/png&quot; srcset=&quot;https://example.com/img/e40258cd-300.png 300w, https://example.com/img/e40258cd-600.png 600w&quot; sizes=&quot;600&quot; /&gt;&lt;img alt=&quot;If this image is not being displayed check the path in the images function in your .eleventy.js file! What you should be able to see here are my original sketches for the site logo&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/e40258cd-300.jpeg&quot; width=&quot;600&quot; height=&quot;449&quot; /&gt;&lt;/picture&gt;

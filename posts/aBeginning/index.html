@@ -57,14 +57,17 @@ its origin or that of the man’s.</p>
 <p>❤️</p>
 <p>if this is the beginning I should probably make myself a todo list so I can keep<br>
 on track with everything… lets program one in javascript.</p>
-<div class="pt-7 ">
+<div class="mt-7 p-2 max-w-xl border border-indigo-200">
+<input id="makeTodoList" class="block mx-auto mt-3 px-2" type="submit" value="Okay, its time to make a list!" onclick="startItemMaker()"/>
+<div id="itemMaker" style="display:none">
 <h1 class="font-bold">Todo list:</h1>
-<input id="todoItem" class="px-1" type="text" placeholder="add a todo item here..." />
-<input type="submit" class="px-1" value="add" onclick="addToList()" />
+<input id="todoItem" class="px-1 text-white bg-gray-400" type="text" placeholder="add a todo item here..." />
+<input type="submit" class="px-1 text-white bg-green-400 hover:bg-green-300" value="add" onclick="addToList()" />
+</div>
 <ol id="todoList" class="pt-3" labelledby="List">
 </ol>
-<input id="newList" class="hidden" type="submit" value="clear list" onclick="finished(); stopFw();return false" />
-<p><a class="hidden" onclick="stopFw();return false">stop fireworks</a></p>
+<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished(); stopFw();return false" />
+<input id="toggleFx" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="new list?" style="display:none;" onclick="finished(); stopFw();return false">
 </div>
 <script>/**
   * You may use this code for free on any web page provided that
@@ -74,9 +77,12 @@ on track with everything… lets program one in javascript.</p>
 
 
 /* this has been updated to use in html5 by ewan-d */
+let getNum = () => Math.floor(Math.random() * 6);
+let colors = ['#ff6699', '#ffcc99', '#ffff66', '#ccffcc', '#00ffff', '#ff66ff', '#ffffff'];
 
-var theObj = '<p style="font-size:2em; color:#00FF00"><B>.</B></p>';
-var numObj = 40, _dl = document.getElementById('sf"+i+"'), sparks = new Array();
+
+var theObj = '<p style="font-size:0.75em;"><B>.</B></p>';
+var numObj = 42, _dl = document.getElementById('sf"+i+"'), sparks = new Array();
 
 mx = function(){ return window.pageXOffset ? window.pageXOffset : document.body.scrollLeft; };
 my = function(){ return window.pageYOffset ? window.pageYOffset : document.body.scrollTop; };
@@ -97,6 +103,7 @@ function ani(){
 
 function reset()
 {
+    let color = colors[getNum()];
     var fwX = mx() + 100 + Math.random() * (cx-200), fwY = my() + 100 + Math.random() * (cy-200);
     for(var i=0 ;i<numObj;i++){
         var el=sparks[i]= document.getElementById("sf"+i) ;
@@ -106,6 +113,7 @@ function reset()
         el.x  = fwX;
         el.y  = fwY;
         _dl ? el.style = el : null;
+        el.style.color = color;
     }
 };
 
@@ -128,14 +136,22 @@ function stopFw()
     }
 }
 </script>
-<script>const startAgain = document.getElementById('newList')
-
-
+<script>
     let input = document.getElementById('todoItem');
  	let listCount = 0;
 
 	const todoList = [];
+    const toggleFx = document.getElementById('toggleFx');
+    const clearList = document.getElementById('clearList');
+    const itemMaker = document.getElementById('itemMaker');
+    const makeTodoList = document.getElementById('makeTodoList');
+
     // use enter key instead of submit...
+    let startItemMaker = () => {
+        itemMaker.style.display= "inline";
+        makeTodoList.style.display= "none";
+    };
+
     input.addEventListener("keyup", event => {
         if(event.keyCode == 13){
             addToList();
@@ -143,8 +159,12 @@ function stopFw()
     });
 
  	let allDone = () => {
-		document.body.style.backgroundColor= 'black';
+		document.body.style.background= 'linear-gradient(to top, #003366 4%, #ff5050 5% , #ff99cc 6%, #000066 25%, #000 55%)';
+        document.body.style.height = '100vh';
 		document.body.style.color= 'white';
+        toggleFx.style.display= 'inline';
+        clearList.style.display= 'none';
+        itemMaker.style.display= 'none';
 	};
 
  	let checkList = () => {
@@ -163,6 +183,10 @@ function stopFw()
 
 	let addToList = () => {
 		listCount++;
+        // check this...
+
+            clearList.style.display= 'inline';
+
 
 		let newEl = document.createElement('li');
         newEl.classList.add('flex', 'justify-start', 'p-1')
@@ -184,12 +208,15 @@ function stopFw()
         }
 
     let finished = () =>{
+        listCount = 0;
         let clearList = document.getElementById("todoList");
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
             }
-        document.body.style.backgroundColor= 'white';
+        document.body.style.background= 'white';
         document.body.style.color= 'black';
+        itemMaker.style.display= 'inline';
+        toggleFx.style.display= 'none';
         }
 </script>
 
