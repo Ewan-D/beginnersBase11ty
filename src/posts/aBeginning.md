@@ -36,7 +36,7 @@ on track with everything... lets program one in javascript.
 <ol id="todoList" class="pt-3" labelledby="List">
 </ol>
 
-<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished(); stopFw();return false" />
+<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished();" />
 
 <input id="toggleFx" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="new list?" style="display:none;" onclick="finished(); stopFw();return false">
 </div>
