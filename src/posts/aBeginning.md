@@ -22,18 +22,18 @@ if this is the beginning I should probably make myself a todo list so I can keep
 on track with everything... lets program one in javascript.
 
 
-<div class="pt-7">
-<h1>This is the todo list</h1>
+<div class="pt-7 ">
+<h1 class="font-bold">Todo list:</h1>
 
-<input id="todoItem" type="text" placeholder="add a todo item..." />
-<input type="submit" value="add" onclick="addToList()" />
+<input id="todoItem" class="px-1" type="text" placeholder="add a todo item here..." />
+<input type="submit" class="px-1" value="add" onclick="addToList()" />
 
-<ol id="todoList" labelledby="List">
+<ol id="todoList" class="pt-3" labelledby="List">
 </ol>
 
-   <input type="submit" value="clear list" onclick="finished(); stopFw();return false" />
+<input id="newList" class="hidden" type="submit" value="clear list" onclick="finished(); stopFw();return false" />
 
-   <a href="#" onclick="stopFw();return false">stop fireworks</a>
+<a class="hidden" onclick="stopFw();return false">stop fireworks</a>
 </div>
 
 

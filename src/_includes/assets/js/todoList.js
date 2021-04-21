@@ -1,5 +1,9 @@
+const startAgain = document.getElementById('newList')
+
+
     let input = document.getElementById('todoItem');
  	let listCount = 0;
+
 	const todoList = [];
     // use enter key instead of submit...
     input.addEventListener("keyup", event => {
@@ -17,7 +21,7 @@
 
     let done = 0;
 	 for(let i=0; i < todoList.length ; i++){
-		 if(todoList[i].lastChild.checked){
+		 if(todoList[i].firstChild.checked){
 			 done++
 		     }
 	        }
@@ -31,10 +35,11 @@
 		listCount++;
 
 		let newEl = document.createElement('li');
+        newEl.classList.add('flex', 'justify-start', 'p-1')
 		let newTodo = document.createTextNode(document.getElementById("todoItem").value);
 			newEl.appendChild(newTodo);
 		let position = document.getElementById('todoList');
-			position.appendChild(newEl).insertAdjacentHTML('beforeend', `<input id="tickBox${listCount}" type="checkbox" />`);
+			position.appendChild(newEl).insertAdjacentHTML('afterbegin', `<input id="tickBox${listCount}" class="mr-2" type="checkbox" />`);
 			todoList.push(newEl);
 
         watch();
