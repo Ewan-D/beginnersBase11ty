@@ -75,7 +75,10 @@ all inevitably changes.
   ... tailwind does have its own plugin for this situation that takes care of
   the styling in very beautiful way. For this starter project I am going to
   leave it blank instead of having to uninstall plugins/delete styling after
-  cloning the repo.
+  cloning the repo. UPDATE I have made a start on extending the base styles here
+  just as a spring board and to point people in the right direction if needed.
+  There is also away of doing this through the js config file. See the tailwind
+  docs for more.
   
 ### files and folders:
 
