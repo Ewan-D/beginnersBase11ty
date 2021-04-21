@@ -19,7 +19,7 @@
   </head>
 
   <body>
-    <div class="max-w-2xl  mx-auto">
+    <div class="prose max-w-2xl  mx-auto">
   	    
 
 
@@ -48,26 +48,32 @@
     <div class="mb-3 text-gray-700">
         <time datetime="2021-04-03">~ 03 Apr 2021</time>
     </div>
-        <p>In the beginning there was a computer and before that there wasn’t a computer.<br>
-Hold on, before the beginning? Yeah lets not worry about that right now please,<br>
+        <p>In the beginning there was a computer and before that there wasn’t a computer.
+Hold on, before the beginning? Yeah lets not worry about that right now please,
 we will be heading around in circles before to long and …</p>
 <h2 id="lets-start-over">lets start over <a class="header-anchor" href="#lets-start-over">#</a></h2>
-<p>In the beginning there was a computer and a man with an idea. Don’t fret about<br>
+<p>In the beginning there was a computer and a man with an idea. Don’t fret about
 its origin or that of the man’s.</p>
 <p>❤️</p>
-<p>if this is the beginning I should probably make myself a todo list so I can keep<br>
-on track with everything… lets program one in javascript.</p>
-<div class="mt-7 p-2 max-w-xl border border-indigo-200">
-<input id="makeTodoList" class="block mx-auto mt-3 px-2" type="submit" value="Okay, its time to make a list!" onclick="startItemMaker()"/>
+<p>‘If this is the beginning,’ the man pondered, 'I should probably make myself a
+list so I can keep a track of everything. He tapped a pencil idly on a note pad
+for a moment or two. ‘I could even use this computer to help!’. The computer
+beeped at him indifferently. 💻</p>
+<p>He fumbled around with the computer for a while, red error messages popping up,
+filling the screen. After a short while, eh, correction here… after days of
+confusion, coffee and cursing, he was happy enough with what he had done. ‘Okay,
+computer; lets begin!’</p>
+<div class="block mx-auto mt-7 p-2 max-w-xl border border-indigo-200">
+<input id="makeTodoList" class="block mx-auto my-3 px-2" type="submit" value="...its time to make a list!" onclick="startItemMaker()"/>
 <div id="itemMaker" style="display:none">
 <h1 class="font-bold">Todo list:</h1>
+<ol id="todoList" class="pt-3" labelledby="List">
+</ol>
 <input id="todoItem" class="px-1 text-white bg-gray-400" type="text" placeholder="add a todo item here..." />
 <input type="submit" class="px-1 text-white bg-green-400 hover:bg-green-300" value="add" onclick="addToList()" />
 </div>
-<ol id="todoList" class="pt-3" labelledby="List">
-</ol>
-<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished(); stopFw();return false" />
-<input id="toggleFx" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="new list?" style="display:none;" onclick="finished(); stopFw();return false">
+<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished();" />
+<input id="toggleFx" class="px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500" type="submit" value="Nice job! Click here to make another list... and on, and on..." style="display:none;" onclick="finished(); stopFw();return false">
 </div>
 <script>/**
   * You may use this code for free on any web page provided that
@@ -139,8 +145,8 @@ function stopFw()
 <script>
     let input = document.getElementById('todoItem');
  	let listCount = 0;
+	let todoList = [];
 
-	const todoList = [];
     const toggleFx = document.getElementById('toggleFx');
     const clearList = document.getElementById('clearList');
     const itemMaker = document.getElementById('itemMaker');
@@ -162,7 +168,7 @@ function stopFw()
 		document.body.style.background= 'linear-gradient(to top, #003366 4%, #ff5050 5% , #ff99cc 6%, #000066 25%, #000 55%)';
         document.body.style.height = '100vh';
 		document.body.style.color= 'white';
-        toggleFx.style.display= 'inline';
+        toggleFx.style.display= 'block';
         clearList.style.display= 'none';
         itemMaker.style.display= 'none';
 	};
@@ -183,20 +189,21 @@ function stopFw()
 
 	let addToList = () => {
 		listCount++;
-        // check this...
 
-            clearList.style.display= 'inline';
-
+        clearList.style.display= 'inline';
 
 		let newEl = document.createElement('li');
-        newEl.classList.add('flex', 'justify-start', 'p-1')
+            newEl.classList.add('flex', 'justify-start', 'p-1')
 		let newTodo = document.createTextNode(document.getElementById("todoItem").value);
 			newEl.appendChild(newTodo);
 		let position = document.getElementById('todoList');
 			position.appendChild(newEl).insertAdjacentHTML('afterbegin', `<input id="tickBox${listCount}" class="mr-2" type="checkbox" />`);
 			todoList.push(newEl);
 
-        watch();
+            document.getElementById('todoItem').value=null;
+
+            watch();
+
 			};
 
     let watch = () => {
@@ -209,16 +216,21 @@ function stopFw()
 
     let finished = () =>{
         listCount = 0;
+        todoList = [];
+
         let clearList = document.getElementById("todoList");
+
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
             }
+
         document.body.style.background= 'white';
         document.body.style.color= 'black';
         itemMaker.style.display= 'inline';
         toggleFx.style.display= 'none';
         }
 </script>
+<p>📝</p>
 
 
 <div class="flex flex-initial mt-7" aria-labelledby="currentPostsTagsList">
