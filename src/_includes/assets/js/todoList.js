@@ -1,8 +1,8 @@
 
     let input = document.getElementById('todoItem');
  	let listCount = 0;
+	let todoList = [];
 
-	const todoList = [];
     const toggleFx = document.getElementById('toggleFx');
     const clearList = document.getElementById('clearList');
     const itemMaker = document.getElementById('itemMaker');
@@ -71,6 +71,7 @@
 
     let finished = () =>{
         listCount = 0;
+        todoList = [];
         let clearList = document.getElementById("todoList");
         while(clearList.firstChild){
             clearList.removeChild(clearList.lastChild);
