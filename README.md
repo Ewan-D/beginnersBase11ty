@@ -57,7 +57,7 @@ step at a time)
 Simplicity that fits my style as it is currently, with enough wiggle room for when that
 all inevitably changes.
 
-## my dumb notes on how this works...
+## how to get started with this thing...
 
 -1) clone repsoitory and npm install
 1) npm run build
@@ -65,8 +65,8 @@ all inevitably changes.
 3) update meta.json in the _data folder with your sites data
 4) npm run dev
 5) make stuff & test it ...
-6) you will probably want to reset the remote repo to set up your own... git remote set-url <remote-name> <remote-url>
-7) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
+5.1) you will probably want to reset the remote repo to set up your own... git remote set-url <remote-name> <remote-url>
+6) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
 
 ### issues you might run into
 * tailwind has a rather aggressive base reset that once you get used to things
