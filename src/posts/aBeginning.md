@@ -29,21 +29,20 @@ computer; lets begin!'
 
 <div class="block mx-auto mt-7 p-2 max-w-xl border border-indigo-200">
 
-<input id="makeTodoList" class="block mx-auto my-3 px-2" type="submit" value="...its time to make a list!" onclick="startItemMaker()"/>
+  <input id="makeTodoList" class="block mx-auto my-3 px-2" type="submit" value="...its time to make a list!" onclick="startItemMaker()"/>
 
-<div id="itemMaker" style="display:none">
-<h1 class="font-bold">Todo list:</h1>
+  <div id="itemMaker" style="display:none">
+    <h1 class="font-bold">Todo list:</h1>
 
-<ol id="todoList" class="pt-3" labelledby="List">
-</ol>
+  <ol id="todoList" class="pt-3" labelledby="List">
+    </ol>
+    <input id="todoItem" class="px-1 text-white bg-gray-400" type="text" placeholder="add a todo item here..." />
+    <input type="submit" class="px-1 text-white bg-green-400 hover:bg-green-300" value="add" onclick="addToList()" />
+    <input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished();" />
 
-<input id="todoItem" class="px-1 text-white bg-gray-400" type="text" placeholder="add a todo item here..." />
-<input type="submit" class="px-1 text-white bg-green-400 hover:bg-green-300" value="add" onclick="addToList()" />
-</div>
+  </div>
 
-<input id="clearList" class="px-1 mt-3 text-white bg-red-400 hover:bg-red-300" type="submit" value="clear list" style="display:none;" onclick="finished();" />
-
-<input id="toggleFx" class="px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500" type="submit" value="Nice job! Click here to make another list..." style="display:none;" onclick="finished(); stopFw();return false" />
+  <input id="toggleFx" class="px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500" type="submit" value="Nice job! Click here to make another list..." style="display:none;" onclick="finished(); stopFw();return false" />
 </div>
 
 <script>{% include "assets/js/fireworks.js" %}</script>

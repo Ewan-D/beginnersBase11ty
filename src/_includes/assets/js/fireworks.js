@@ -3,9 +3,8 @@
   * these comment lines and the following credit remain in the code.
   * Cross Browser Fireworks from http://www.javascript-fx.com
   */
-
-
 /* this has been updated to use in html5 by ewan-d */
+
 let getNum = () => Math.floor(Math.random() * 6);
 let colors = ['#ff6699', '#ffcc99', '#ffff66', '#ccffcc', '#00ffff', '#ff66ff', '#ffffff'];
 
