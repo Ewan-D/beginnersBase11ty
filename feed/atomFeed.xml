@@ -7,7 +7,7 @@
     <link href="/beginnersBase11ty/feed/atomFeed.xml" rel="self"/>
 
   <link href=""/>
-  <updated>2021-04-21T20:15:25Z</updated>
+  <updated>2021-04-22T16:57:22Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Ewan-D</name>
@@ -36,25 +36,24 @@ filling the screen. After a short while, eh, correction here… after days of
 confusion, coffee and cursing, he was happy enough with what he had done. ‘Okay,
 computer; lets begin!’&lt;/p&gt;
 &lt;div class=&quot;block mx-auto mt-7 p-2 max-w-xl border border-indigo-200&quot;&gt;
-&lt;input id=&quot;makeTodoList&quot; class=&quot;block mx-auto my-3 px-2&quot; type=&quot;submit&quot; value=&quot;...its time to make a list!&quot; onclick=&quot;startItemMaker()&quot; /&gt;
-&lt;div id=&quot;itemMaker&quot; style=&quot;display:none&quot;&gt;
-&lt;h1 class=&quot;font-bold&quot;&gt;Todo list:&lt;/h1&gt;
-&lt;ol id=&quot;todoList&quot; class=&quot;pt-3&quot; labelledby=&quot;List&quot;&gt;
-&lt;/ol&gt;
-&lt;input id=&quot;todoItem&quot; class=&quot;px-1 text-white bg-gray-400&quot; type=&quot;text&quot; placeholder=&quot;add a todo item here...&quot; /&gt;
-&lt;input type=&quot;submit&quot; class=&quot;px-1 text-white bg-green-400 hover:bg-green-300&quot; value=&quot;add&quot; onclick=&quot;addToList()&quot; /&gt;
-&lt;/div&gt;
-&lt;input id=&quot;clearList&quot; class=&quot;px-1 mt-3 text-white bg-red-400 hover:bg-red-300&quot; type=&quot;submit&quot; value=&quot;clear list&quot; style=&quot;display:none;&quot; onclick=&quot;finished();&quot; /&gt;
-&lt;input id=&quot;toggleFx&quot; class=&quot;px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500&quot; type=&quot;submit&quot; value=&quot;Nice job! Click here to make another list...&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
+  &lt;input id=&quot;makeTodoList&quot; class=&quot;block mx-auto my-3 px-2&quot; type=&quot;submit&quot; value=&quot;...its time to make a list!&quot; onclick=&quot;startItemMaker()&quot; /&gt;
+  &lt;div id=&quot;itemMaker&quot; style=&quot;display:none&quot;&gt;
+    &lt;h1 class=&quot;font-bold&quot;&gt;Todo list:&lt;/h1&gt;
+  &lt;ol id=&quot;todoList&quot; class=&quot;pt-3&quot; labelledby=&quot;List&quot;&gt;
+    &lt;/ol&gt;
+    &lt;input id=&quot;todoItem&quot; class=&quot;px-1 text-white bg-gray-400&quot; type=&quot;text&quot; placeholder=&quot;add a todo item here...&quot; /&gt;
+    &lt;input type=&quot;submit&quot; class=&quot;px-1 text-white bg-green-400 hover:bg-green-300&quot; value=&quot;add&quot; onclick=&quot;addToList()&quot; /&gt;
+    &lt;input id=&quot;clearList&quot; class=&quot;px-1 mt-3 text-white bg-red-400 hover:bg-red-300&quot; type=&quot;submit&quot; value=&quot;clear list&quot; style=&quot;display:none;&quot; onclick=&quot;finished();&quot; /&gt;
+  &lt;/div&gt;
+  &lt;input id=&quot;toggleFx&quot; class=&quot;px-1 my-3 mx-auto text-white bg-indigo-800 hover:bg-indigo-500&quot; type=&quot;submit&quot; value=&quot;Nice job! Click here to make another list...&quot; style=&quot;display:none;&quot; onclick=&quot;finished(); stopFw();return false&quot; /&gt;
 &lt;/div&gt;
 &lt;script&gt;/**
   * You may use this code for free on any web page provided that
   * these comment lines and the following credit remain in the code.
   * Cross Browser Fireworks from http://www.javascript-fx.com
   */
-
-
 /* this has been updated to use in html5 by ewan-d */
+
 let getNum = () =&gt; Math.floor(Math.random() * 6);
 let colors = [&#39;#ff6699&#39;, &#39;#ffcc99&#39;, &#39;#ffff66&#39;, &#39;#ccffcc&#39;, &#39;#00ffff&#39;, &#39;#ff66ff&#39;, &#39;#ffffff&#39;];
 
@@ -232,7 +231,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>and another thing</title>
     <link href="https://example.com/beginnersBase11ty/posts/aNewBeginning/"/>
-    <updated>2021-04-21T20:15:25Z</updated>
+    <updated>2021-04-22T16:57:22Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aNewBeginning/</id>
     <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing…&lt;/p&gt;
 </content>
@@ -241,7 +240,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>Lets do some programming!</title>
     <link href="https://example.com/beginnersBase11ty/posts/letsMakeAProgram/"/>
-    <updated>2021-04-21T20:15:25Z</updated>
+    <updated>2021-04-22T16:57:22Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/letsMakeAProgram/</id>
     <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting
 to effect the way that I look things. For instance, I am enjoying reading Ursula
@@ -273,7 +272,7 @@ unprofitable, sleep. &lt;br /&gt; - Ursula K. Le Guin&lt;/p&gt;
   <entry>
     <title>sketches for the site&#39;s mascot</title>
     <link href="https://example.com/beginnersBase11ty/posts/pygmyPossum/"/>
-    <updated>2021-04-21T20:15:25Z</updated>
+    <updated>2021-04-22T16:57:22Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/pygmyPossum/</id>
     <content type="html">&lt;div class=&quot;mb-7&quot;&gt;
 &lt;picture&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://example.com/img/e40258cd-300.jpeg 300w, https://example.com/img/e40258cd-600.jpeg 600w&quot; sizes=&quot;600&quot; /&gt;&lt;source type=&quot;image/png&quot; srcset=&quot;https://example.com/img/e40258cd-300.png 300w, https://example.com/img/e40258cd-600.png 600w&quot; sizes=&quot;600&quot; /&gt;&lt;img alt=&quot;If this image is not being displayed you might be viewing it via github pages... go to the netlify site! Or check the path in the images function in your .eleventy.js file! What you should be able to see here are my original sketches for the site logo&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/e40258cd-300.jpeg&quot; width=&quot;600&quot; height=&quot;449&quot; /&gt;&lt;/picture&gt;
