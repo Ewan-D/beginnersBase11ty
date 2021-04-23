@@ -1,7 +1,5 @@
 # A starting point for someone who is new to ssg's & 11ty.
 
-If you can identify with what is written below let me know :)
-
 
 [![Netlify
 Status](https://api.netlify.com/api/v1/badges/f013a778-7d72-48b8-a8e0-62ab984ea301/deploy-status)](https://app.netlify.com/sites/trusting-pasteur-48f806/deploys)
