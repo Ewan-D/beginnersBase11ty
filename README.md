@@ -56,14 +56,14 @@ all inevitably changes.
 
 ## how to get started with this thing...
 
--1) clone repsoitory and npm install
-1) npm run build
-2) delete all the *.md files in the posts folder (not the .json) nuke all the images in the siteImages folder while your at it!
-3) update meta.json in the _data folder with your sites data
-4) npm run dev
-5) make stuff & test it ...
-5.1) you will probably want to reset the remote repo to set up your own... git remote set-url <remote-name> <remote-url>
-6) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
+1) clone repsoitory and npm install
+2) npm run build
+3) delete all the *.md files in the posts folder (not the .json) nuke all the images in the siteImages folder while your at it!
+4) update meta.json in the _data folder with your sites data
+5) npm run dev
+6) make stuff & test it ...
+7) you will probably want to reset the remote repo to set up your own... git remote set-url <remote-name> <remote-url>
+8) deploy to either github or netlify (this config as it is works best with netlify) see notes on using github pages.
 
 ### issues you might run into
 * tailwind has a rather aggressive base reset that once you get used to things
