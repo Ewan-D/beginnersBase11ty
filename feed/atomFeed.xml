@@ -7,7 +7,7 @@
     <link href="/beginnersBase11ty/feed/atomFeed.xml" rel="self"/>
 
   <link href=""/>
-  <updated>2021-07-18T08:17:45Z</updated>
+  <updated>2021-07-23T20:14:07Z</updated>
   <id>https://example.com/</id>
   <author>
     <name>Ewan-D</name>
@@ -231,7 +231,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>and another thing</title>
     <link href="https://example.com/beginnersBase11ty/posts/aNewBeginning/"/>
-    <updated>2021-07-18T08:17:45Z</updated>
+    <updated>2021-07-23T20:14:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/aNewBeginning/</id>
     <content type="html">&lt;p&gt;I dunno, I think in retrospect I could probably have saved myself some time if I had just started with a clone. But would I have learnt so much? Or even, would it have been so satisfying? Not to worry time to move on to the next thing…&lt;/p&gt;
 </content>
@@ -240,7 +240,7 @@ doubt it very much.&lt;/p&gt;
   <entry>
     <title>Lets do some programming!</title>
     <link href="https://example.com/beginnersBase11ty/posts/letsMakeAProgram/"/>
-    <updated>2021-07-18T08:17:45Z</updated>
+    <updated>2021-07-23T20:14:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/letsMakeAProgram/</id>
     <content type="html">&lt;p&gt;I have been learning how to do a bit of programming recently and it is starting
 to effect the way that I look things. For instance, I am enjoying reading Ursula
@@ -272,7 +272,7 @@ unprofitable, sleep. &lt;br /&gt; - Ursula K. Le Guin&lt;/p&gt;
   <entry>
     <title>sketches for the site&#39;s mascot</title>
     <link href="https://example.com/beginnersBase11ty/posts/pygmyPossum/"/>
-    <updated>2021-07-18T08:17:45Z</updated>
+    <updated>2021-07-23T20:14:07Z</updated>
     <id>https://example.com/beginnersBase11ty/posts/pygmyPossum/</id>
     <content type="html">&lt;div class=&quot;mb-7&quot;&gt;
 &lt;picture&gt;&lt;source type=&quot;image/jpeg&quot; srcset=&quot;https://example.com/img/e40258cd-300.jpeg 300w, https://example.com/img/e40258cd-600.jpeg 600w&quot; sizes=&quot;600&quot; /&gt;&lt;source type=&quot;image/png&quot; srcset=&quot;https://example.com/img/e40258cd-300.png 300w, https://example.com/img/e40258cd-600.png 600w&quot; sizes=&quot;600&quot; /&gt;&lt;img alt=&quot;If this image is not being displayed you might be viewing it via github pages... go to the netlify site! Or check the path in the images function in your .eleventy.js file! What you should be able to see here are my original sketches for the site logo&quot; loading=&quot;lazy&quot; decoding=&quot;async&quot; src=&quot;https://example.com/img/e40258cd-300.jpeg&quot; width=&quot;600&quot; height=&quot;449&quot; /&gt;&lt;/picture&gt;
